@@ -1,9 +1,11 @@
-import StyledComponentsRegistry from "../styles/registry"
 import { Metadata } from "next"
 
 import { SideMenu } from "./components/SideMenu"
 import { QuicksandFont } from "./fonts"
 import { Providers } from "./providers"
+
+import "./styles/global.scss"
+import styles from "./styles/common.module.scss"
 
 export const metadata: Metadata = {
   title: "Diego Almeida - Full Stack Portfolio",
@@ -77,12 +79,12 @@ export default function RootLayout({
     <html lang="en" className={QuicksandFont.className}>
       <body>
         <Providers>
-          <StyledComponentsRegistry>
+          <div style={{ display: "flex" }}>
             <SideMenu />
-          </StyledComponentsRegistry>
-          <StyledComponentsRegistry>
-            {children}
-          </StyledComponentsRegistry>
+            <main className={styles.content}>
+              {children}
+            </main>
+          </div>
         </Providers>
       </body>
     </html>
