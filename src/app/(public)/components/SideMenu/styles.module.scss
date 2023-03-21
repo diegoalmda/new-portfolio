@@ -102,6 +102,10 @@
         font-size: 1.2rem;
         align-items: flex-start;
 
+        li .active {
+          background-color: var(--blue-500);
+        }
+
         li a {
           // pointer-events: none;
           margin: 0.2rem 0;

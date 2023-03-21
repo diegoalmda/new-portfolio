@@ -1,6 +1,7 @@
 "use client"
 
 import { ReactNode } from "react"
+import { GlobalApplicationContextProvider } from "./contexts/GlobalApplicationContext"
 
 interface ProvidersProps {
   children: ReactNode;
@@ -8,8 +9,8 @@ interface ProvidersProps {
 
 export function Providers({ children }: ProvidersProps) {
   return (
-    <>
+    <GlobalApplicationContextProvider>
       {children}
-    </>    
+    </GlobalApplicationContextProvider>    
   )
 }
