@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { House, User, Desktop, SuitcaseSimple, AddressBook, LinkedinLogo, GithubLogo, CaretRight, X, List, XSquare } from "phosphor-react"
+import { House, User, Desktop, SuitcaseSimple, AddressBook, LinkedinLogo, GithubLogo, CaretRight, X } from "phosphor-react"
 
 import avatar from "../../assets/images/avatar.png"
 import triangle_purple from "../../assets/images/triangle-purple.svg"
@@ -10,13 +10,13 @@ import triangle_pink from "../../assets/images/triangle-pink.svg"
 
 import styles from "./styles.module.scss"
 import Link from "next/link"
-import { useCallback } from "react"
-import { useHover } from "../../hooks/useHover"
+// import { useCallback } from "react"
+// import { useHover } from "../../hooks/useHover"
 
 export function SideMenu() {
   // const menuRef = useRef(null)
 
-  const [hoverRef, isHovered, setShowMenu] = useHover()
+  // const [hoverRef, isHovered, setShowMenu] = useHover()
 
   const year = new Date()
 
@@ -52,8 +52,7 @@ export function SideMenu() {
     <section className={styles.menuContainer}>
       <div 
         // className={`${isHovered ? styles.openMenu : styles.backgroundContainer}`}
-        className={`${styles.backgroundContainer}`}
-        ref={hoverRef}
+        className={`${styles.backgroundContainer}`}        
       >
         <button 
           className={styles.closeButton}
@@ -80,8 +79,6 @@ export function SideMenu() {
             <li>
               <Link 
                 href="/"
-                
-                // onClick={(e) => handleCloseMenu(e)}
               >
                 <House className="mr-2" />
                 <span>Home</span>                
@@ -90,8 +87,6 @@ export function SideMenu() {
             <li>
               <Link 
                 href="/about"
-                
-                // onClick={(e) => handleCloseMenu(e)}
               >
                 <User className="mr-2" />
                 <span>Sobre mim</span>                
@@ -100,8 +95,6 @@ export function SideMenu() {
             <li>
               <Link 
                 href="/skills"
-                
-                // onClick={(e) => handleCloseMenu(e)}
               >
                 <Desktop className="mr-2" />
                 <span>Tecnologias</span>                
@@ -110,8 +103,6 @@ export function SideMenu() {
             <li>
               <Link 
                 href="/projects"
-                
-                // onClick={(e) => handleCloseMenu(e)}
               >
                 <SuitcaseSimple className="mr-2" />
                 <span>Projetos</span>                
@@ -120,8 +111,6 @@ export function SideMenu() {
             <li>
               <Link 
                 href="/contact"
-                
-                // onClick={(e) => handleCloseMenu(e)}
               >
                 <AddressBook className="mr-2" />
                 <span>Contato</span>                              
