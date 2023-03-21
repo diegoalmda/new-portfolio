@@ -28,7 +28,9 @@ export function SideMenu() {
             <strong>Menu</strong>
             <CaretRight />
           </div>
-          <Image className={styles.imageAvatar} src={avatar} alt="Diego" />
+          <div className={styles.avatarContainer}>
+            <Image className={styles.imageAvatar} src={avatar} alt="Diego" />
+          </div>
         </div>
         <nav className={styles.menuContent}>
           <ul>
@@ -74,7 +76,7 @@ export function SideMenu() {
             </li>
           </ul>
           <div className={styles.copyright}>
-            <small>Diego Almeida <span>@{`${year.getFullYear()}`}</span></small>
+            <small><span>Diego Almeida </span>@{`${year.getFullYear()}`}</small>
           </div>
         </div>
       </div>

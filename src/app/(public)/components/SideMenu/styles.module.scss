@@ -30,6 +30,38 @@
     @media (max-width: 420px) {
       max-width: 3rem;
       border-radius: 0 10px 10px 0;
+
+      &:hover {
+        .menuContent {        
+          ul {  
+            li {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+
+      .menuHeader {        
+        .menuTitle {
+          svg {
+            width: 1.2rem;
+          }
+
+          strong {
+            font-size: 0.6rem;
+            z-index: 3;
+          }
+        }
+      }
+
+      .menuContent {        
+        ul {  
+          li {
+            margin-left: -1.4rem;
+            transition: margin-left 0.4s;
+          }
+        }
+      }
     }
 
     &:hover {
@@ -74,102 +106,77 @@
       }
   
       .menuHeader {
-        position: relative;
-        background-color: var(--green-500);
 
-        margin: 2rem;
-        width: 6rem;        
-        border-radius: 50%;
-
+        justify-content: flex-start;
+        
         .menuTitle {
           // position: absolute;
           display: none;
         }
         
-        .imageAvatar {
-          opacity: 1;
-          width: 90%;
-          height: 87%;
+        .avatarContainer {
+          background-color: var(--green-500);
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          
+          margin: 2rem;
+          width: 6rem;        
+          border-radius: 50%;
+
+          .imageAvatar {
+            opacity: 1;
+            width: 90%;
+            height: 87%;
+          }
+        }
+        
+      }
+  
+      .menuContent {  
+        ul {
+          li span {
+            opacity: 1;
+          }
         }
       }
   
-      // .menuContent {
-      //   margin: 2rem 0;
-      //   z-index: 2;
-  
-      //   ul {
-      //     min-height: 200px;
-      //     display: flex;
-      //     flex-direction: column;
-      //     justify-content: space-between;
-      //     font-size: 1.2rem;
+      .footer {
+        margin-bottom: 2rem;
 
-      //     li span {
-      //       display: block;
-      //     }
+        .socialContent {
+          align-items: flex-start;
+          margin-left: 2rem;
   
-      //     li a {
-      //       margin: 0 1.5rem;
-      //       display: flex;
-      //       justify-content: center;
-      //       align-items: center;
-      //       max-width: fit-content;
-      //       border-radius: 10px;
-      //       padding: 0.4rem 0.5rem;
-      //       font-weight: 600;
-      //       transition: background-color 0.4s;
+          span {
+            display: block;
+          }
   
-      //       & > svg {
-      //         margin-right: 0.5rem;
-      //       }
-  
-      //       &:hover {
-      //         background-color: var(--blue-100-40);
-      //       }
-      //     }
-      //   }
-      // }
-  
-      // .socialContent {
-      //   margin: 2rem;
-      //   z-index: 2;
-
-      //   span {
-      //     display: block;
-      //   }
-
-      //   strong {
-      //     display: none;
-      //   }
-        
-      //   li {
-      //     font-weight: 700;
-      //     transition: all 0.2s;
-  
-      //     &:first-child {
-      //       margin-bottom: 0.7rem;
-      //     }
+          strong {
+            display: none;
+          }
           
-      //     &:hover {
-      //       transform: scale(1.2);
-      //       margin-left: 0.3rem;
-      //     }
-      //   }
-      // }
-  
-      // .footer {
-      //   opacity: 1;
-      //   z-index: 5;
-      //   margin: 0 0 2rem 1rem;
-  
-      //   small {
-      //     color: var(--green-500);
-  
-      //     span {
-      //       color: var(--blue-500);
-      //     }
-      //   }
-      // }
+          li {
+            font-weight: 700;
+            transition: all 0.2s;
+    
+            &:first-child {
+              margin-bottom: 0.7rem;
+            }
+            
+            &:hover {
+              transform: scale(1.2);
+              margin-left: 0.3rem;
+            }
+          }
+        }
+
+        .copyright {
+          margin: 0 0 2rem 1rem;
+          opacity: 1;
+        }
+      }  
     }    
 
     .triangle_purple,
@@ -184,19 +191,25 @@
     }
     
     .menuHeader {
-      height: 6rem;
+      height: 10rem;
+      max-height: 10rem;
       z-index: 3;
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100%;
+      
+      .avatarContainer {
+        height: 6rem;
 
-      .imageAvatar {
-        opacity: 0;
-        width: 0;
-        height: 0;
-        transition: opacity ease-in 1.2s, height 0s, width 0s;
+        .imageAvatar {
+          opacity: 0;
+          width: 0;
+          height: 0;
+          transition: opacity ease-in 1.2s, height 0s, width 0s;
+        }
       }
+
 
       @keyframes example {
         0%   {right: 0;}
@@ -228,15 +241,14 @@
       z-index: 2;
       flex: 1;
       width: 100%;
-
+      
       ul {
-        height: 100%;
-        min-height: 200px;
+        height: 250px;
+        min-height: 250px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         font-size: 1.2rem;
-        align-items: center;
+        align-items: flex-start;
 
         li a {
           margin: 0.2rem 1.5rem;
@@ -248,6 +260,11 @@
           padding: 0.4rem 0.5rem;
           font-weight: 600;
           transition: background-color 0.4s;
+          white-space: nowrap;  
+
+          & > svg {
+            margin-right: 0.5rem;
+          }
           
           svg {
             font-size: 1.8rem;
@@ -259,15 +276,19 @@
         }
 
         li span {
-          display: none;
+          opacity: 0;
+          transition: opacity 0.5s;
         }
       }
     }
 
-    .footer {
-      height: 12rem;
-      position: relative;
+    .footer {   
+      min-height: 150px; 
       width: 100%;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       
       .socialContent {
         display: flex;
@@ -276,7 +297,6 @@
         align-items: center;
         width: 100%;
         height: 100%;
-        z-index: 2;
   
         span {
           display: none;
@@ -303,11 +323,21 @@
       }
 
       .copyright {
-        position: absolute;
-        bottom: 0;
+        z-index: 5;
         opacity: 0;
+        margin: 0 0 1rem -6rem;
+        transition: opacity 0.1s, margin 0.5s;
+        
+        small {        
+          white-space: nowrap;  
+          font-size: 0.8rem;
+          color: var(--blue-500);
+          
+          span {
+            color: var(--green-500);
+          }
+        }
       }
     }
-
   }
 }
