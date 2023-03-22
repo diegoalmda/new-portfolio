@@ -1,10 +1,186 @@
-.contentContainer {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  height: calc(100vh - 5rem);
-
+.profileImageContent {
+  position: relative;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  
+  .imageContainer {
+    z-index: 4;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.006);
+    border: 2px solid rgba(232, 238, 255, 0.4);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 40px;
+  
+    img {
+      margin-bottom: -1rem;
+      padding-top: 1rem;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  .trianglesContainer {
+    position: relative;
+    width: 22rem;
+    height: 22rem;
+    
+    .purpleTriangle {
+      z-index: 1;
+      width: 50%;
+      height: 50%;
+      position: absolute;
+      top: 1.5rem;
+      left: 6rem;
+    }
+    
+    .greenTriangle {
+      z-index: 2;
+      width: 42%;
+      height: 42%;
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+    }
+    
+    .pinkTriangle {
+      z-index: 3;
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      bottom: 4rem;
+      left: 1.5rem;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .imageContainer {
+      width: 120px;
+      height: 120px;
+
+      img {
+        margin-bottom: -1rem;
+        padding-top: 1rem;
+        width: 120px;
+        height: 120px;
+      }
+    }
+    
+    .trianglesContainer {
+      position: relative;
+      width: 14rem;
+      height: 14rem;
+      border: 1px solid red;
+
+      .purpleTriangle {
+        z-index: 1;
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        top: 0.5rem;
+        left: 6rem;
+      }
+      
+      .greenTriangle {
+        z-index: 2;
+        width: 42%;
+        height: 42%;
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+      }
+      
+      .pinkTriangle {
+        z-index: 3;
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        bottom: 4rem;
+        left: 1.5rem;
+      }
+    }
+  }
+  
+}
+
+.presentation {
+  display: flex;
+
+  .littleTriangle {
+    width: 6rem;
+    margin: 2rem;
+
+    @media (max-width: 720px) {
+      display: none;
+    }
+  }
+
+  .info {
+    h1 {
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+  
+      span {
+        font-size: 2.2rem;
+        color: var(--green-500);
+        text-align: left;
+      }
+    }
+  
+    p {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    @media (max-width: 720px) {
+      h1 {
+        font-size: 1.2rem;
+      }
+    
+      h2 {
+        font-size: 1.4rem;
+    
+        span {
+          font-size: 1.5rem;
+        }
+      }
+    
+      p {
+        font-size: 1rem;
+      }
+    }
+  } 
+}
+
+.resumeSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    margin-top: 2rem;
+    background-color: var(--blue-800);
+    border: none;
+    color: var(--white);
+    padding: 1rem 1.6rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+    
+    &:hover {
+      filter: brightness(1.4);
+    }
+  }
 }

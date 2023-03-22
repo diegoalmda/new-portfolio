@@ -250,7 +250,7 @@
       }
     }
 
-    @keyframes example {
+    @keyframes arrowAnimation {
       0%   {right: 0;}
       100% {right: -0.3rem;}
     }
@@ -265,7 +265,7 @@
       opacity: 1;
       
       svg {
-        animation-name: example;
+        animation-name: arrowAnimation;
         animation-duration: 1.5s;
         animation-iteration-count: infinite;
         position: absolute;

@@ -3,6 +3,19 @@
   width: 100%;
 }
 
+.pageContent {
+  animation-name: pageLoading;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-duration: 0.5s;
+  
+  @keyframes pageLoading {
+    0%   {opacity: 0; margin-left: 0}
+    50%   {opacity: 0.2; margin-left: -2rem}
+    100% {opacity: 1; margin-left: 0}
+  }
+}
+
 .titleContent {
   hr {
     background-color: var(--purple-500);
@@ -27,6 +40,11 @@
     box-shadow: 2px 2px 2px var(--purple-800-40);
     background-color: transparent;
     color: var(--purple-800);
+    font-weight: 600;
+    
+    &:hover {
+      background-color: var(--purple-800-40);
+    }
   }
   
   .active {

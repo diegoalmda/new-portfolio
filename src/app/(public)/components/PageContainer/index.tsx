@@ -2,6 +2,7 @@
 
 import { CaretLeft, CaretRight } from "phosphor-react"
 import { ReactNode } from "react"
+import { QuicksandFont } from "../../fonts"
 
 import styles from "./styles.module.scss"
 
@@ -14,8 +15,8 @@ export function PageContainer({ title, children }: PageContainerProps) {
   return (
     <div className={styles.pageContentContainer}>
       <div className={styles.languageButtons}>
-        <button className={styles.active}>PT</button>
-        <button>EN</button>
+        <button className={`${styles.active} ${QuicksandFont.className}`}>PT</button>
+        <button className={QuicksandFont.className}>EN</button>
       </div>
       {
         title.toLowerCase() !== "home" && <div className={styles.titleContent}><h1>{title}</h1><hr></hr></div>
@@ -29,14 +30,14 @@ export function PageContainer({ title, children }: PageContainerProps) {
           </div>
         } 
         {
-          title.toLowerCase() !== "contact" && title !== "contato" && 
+          title.toLowerCase() !== "contact" && title.toLowerCase() !== "contato" && 
           <div className={styles.arrowRightButton}>
             <button><CaretRight /></button>
             <span>Veja mais</span>
           </div>
         }
       </div>
-      <div>
+      <div className={styles.pageContent}>
         { children }
       </div>
     </div>
