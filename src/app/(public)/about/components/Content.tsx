@@ -1,7 +1,14 @@
 "use client"
 
+import { PageContainer } from "../../components/PageContainer"
+import { useGlobalContext } from "../../contexts/GlobalApplicationContext"
+
 export function Content() {
+  const { selectedLanguage } = useGlobalContext()
+  
   return (
-    <h2>Página Sobre mim</h2>
+    <PageContainer title={selectedLanguage.about.title}>
+      
+    </PageContainer>
   )
 }

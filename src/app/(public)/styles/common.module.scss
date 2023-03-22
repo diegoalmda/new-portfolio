@@ -1,11 +1,11 @@
-main {
-  .content {
-    margin: 2rem 4rem 2rem 10rem;
-    text-align: justify;
-    
-    @media (max-width: 720px) {
-      margin: 2rem 2rem 2rem 5rem;
-
-    }
+.content {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 4rem);
+  margin: 2rem 4rem 2rem 10rem;
+  text-align: justify;
+  
+  @media (max-width: 720px) {
+    margin: 2rem 2rem 2rem 5rem;
   }
 }

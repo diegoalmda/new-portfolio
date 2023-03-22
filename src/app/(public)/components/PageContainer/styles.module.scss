@@ -1,0 +1,115 @@
+.pageContentContainer {
+  height: 100%;
+  width: 100%;
+}
+
+.titleContent {
+  hr {
+    background-color: var(--purple-500);
+    border: none;
+    width: 5.5rem;
+    height: 0.25rem;
+    margin: 0.5rem 0 2rem 0;
+  }
+}
+
+.languageButtons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  button {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--purple-800-40);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px var(--purple-800-40);
+    background-color: transparent;
+    color: var(--purple-800);
+  }
+  
+  .active {
+    background-color: var(--purple-800-20);
+  }
+}
+
+.arrowLeftButton, .arrowRightButton {
+  position: absolute;
+  top: 50%;                         
+  transform: translateY(0, -50%);
+
+  span {
+    position: absolute;
+    font-size: 0;
+    white-space: nowrap;
+    bottom: -0.5rem;   
+    transition: font-size 0.4s; 
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+
+    svg {
+      opacity: 0.6;
+      font-size: 3rem;      
+      color: var(--purple-500);
+      transition: transform 0.5s, opacity 0.5s;
+    }    
+  }
+  
+  &:hover {
+    span {
+      font-size: 0.6rem;
+    }
+
+    button {
+      svg {
+        transform: scale(1.4);
+        opacity: 1;
+      }
+    }
+  }
+
+  @media (max-width: 720px) {
+    button {
+      svg {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    display: none;
+  }
+}
+
+.arrowLeftButton {
+  left: 0;
+  margin-left: -2rem;
+
+  span {
+    right: 0.8rem;
+    
+  }
+  @media (max-width: 720px) {    
+    margin-left: -1.5rem; 
+    span {
+      right: 0;
+    } 
+  }
+} 
+
+.arrowRightButton {
+  right: 0;
+  margin-right: -2rem;
+
+  span {
+    right: 0.2rem;
+  }
+
+  @media (max-width: 720px) {    
+    margin-right: -1.5rem; 
+  }
+}

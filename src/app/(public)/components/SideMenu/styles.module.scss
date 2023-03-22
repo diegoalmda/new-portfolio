@@ -33,6 +33,7 @@
 
     @media (min-width: 421px) {
       &:hover {
+        z-index: 2;
         border-radius: 0 50% 120% 0 / 0 70% 100% 0;
         margin-top: -2rem;
         width: 260px;

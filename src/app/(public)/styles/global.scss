@@ -21,6 +21,7 @@
   --purple-500: #591B94;
   --purple-800: #251749;
   --purple-800-40: rgba(37, 23, 73, 0.4);
+  --purple-800-20: rgba(37, 23, 73, 0.2);
 }
 
 @media (max-width: 1080px) {
@@ -38,7 +39,7 @@
 body {
   background: var(--blue-100);
   color: var(--purple-800);
-  -webkit-font-smoothing: antialiased; 
+  -webkit-font-smoothing: antialiased;
 }
 
 body, input, textarea, select, button {
