@@ -1,8 +1,8 @@
 import { Metadata } from "next"
 
 import { SideMenu } from "./components/SideMenu"
-import { QuicksandFont } from "./fonts"
 import { Providers } from "./providers"
+import { QuicksandFont } from "./fonts"
 
 import "./styles/global.scss"
 import styles from "./styles/common.module.scss"

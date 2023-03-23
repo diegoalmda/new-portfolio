@@ -1,5 +1,7 @@
 "use client"
 
+import { useCallback } from "react"
+import Image from "next/image"
 import { PageContainer } from "../../components/PageContainer"
 import { useGlobalContext } from "../../contexts/GlobalApplicationContext"
 
@@ -8,8 +10,6 @@ import rocketseat from "../../assets/images/courses/rocketseat-logo.png"
 import udemy from "../../assets/images/courses/udemy-logo.png"
 
 import styles from "./styles.module.scss"
-import Image from "next/image"
-import { useCallback } from "react"
 
 export function Content() {
   const { selectedLanguage } = useGlobalContext()

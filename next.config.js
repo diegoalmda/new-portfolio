@@ -3,6 +3,9 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
+  env: {
+    NEXT_PUBLIC_IMAGES_SKILLS: "/assets"
+  }
 }
 
 // eslint-disable-next-line no-undef

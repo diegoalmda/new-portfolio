@@ -1,17 +1,18 @@
 "use client"
 
+import Image from "next/image"
+
 import { PageContainer } from "../../components/PageContainer"
+import { useGlobalContext } from "../../contexts/GlobalApplicationContext"
+import { CustomButton } from "../CustomButton"
 
 import profilePicture from "../../assets/images/profile-picture.png"
 import profilePurpleTriangle from "../../assets/images/profile-purple-triangle.svg"
 import profileGreenTriangle from "../../assets/images/profile-green-triangle.svg"
 import profilePinkTriangle from "../../assets/images/profile-pink-triangle.svg"
 import littleTriangle from "../../assets/images/little-green-triangle.svg"
-import Image from "next/image"
 
 import styles from "./home.module.scss"
-import { useGlobalContext } from "../../contexts/GlobalApplicationContext"
-import { CustomButton } from "../CustomButton"
 
 export function HomeContentComponent() {  
   const { selectedLanguage } = useGlobalContext()

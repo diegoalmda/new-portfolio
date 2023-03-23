@@ -111,7 +111,7 @@ const pt = {
     subtitle: "Meu trabalho",
     message1: "Logo abaixo estão mais das algumas tecnologias que uso para construir meus projetos.",
     message2: "Veja a página de projetos.",
-    text: "Crio sites responsivos com foco em usabilidade, experiência do usuário e boas práticas. A principal área de minha experiência é desenvolvimento front-end, HTML, CSS, JS, ReactJS e React Native, construindo aplicativos web de pequeno e médio porte, apps para dispositivos móveis, implantação de novos recursos e codificação de layouts interativos. Também tenho experiência como desenvolvedor full-stack com Node.js."
+    text: "Crio sites responsivos com foco em usabilidade, experiência do usuário e boas práticas. A principal área de minha experiência é desenvolvimento front-end, HTML, CSS, JS, ReactJS e React Native, construindo aplicativos web de pequeno e médio porte, apps para dispositivos móveis, implantação de novos recursos e codificação de layouts interativos. Também tenho experiência como desenvolvedor full-stack com Node.js. Tenho um perfil flexível, o que me permite atuar em diversas áreas e atividades ao mesmo tempo de forma organizada, sabendo distinguir entre tarefas mais urgentes e tarefas secundárias. Atuando desta forma, consigo me manter focado quando estou sob muita demanda, o que me possibilita entregar os projetos dentro dos prazos."
   }
 }
 
