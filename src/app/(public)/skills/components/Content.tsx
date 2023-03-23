@@ -8,10 +8,10 @@ import { TechnologyCards } from "./TechnologyCards"
 
 export function Content() {
   const { selectedLanguage } = useGlobalContext()
-  const { title, text } = selectedLanguage.skills
+  const { title, text, goToPage } = selectedLanguage.skills
   
   return (
-    <PageContainer title={title}>
+    <PageContainer title={title} goToPage={goToPage}>
       <div className={styles.skillsText}>
         <p>
           { text }

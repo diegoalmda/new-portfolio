@@ -18,7 +18,11 @@ interface GlobalApplicationProps {
     message: string,
     description: string,
     doc: string,
-    file: string
+    file: string,
+    goToPage: {
+      back: string
+      forward: string
+    }
   },
   about: {
     title: string,
@@ -30,7 +34,11 @@ interface GlobalApplicationProps {
       id: string,
       title: string,
       courses: string[]
-    }[]
+    }[],
+    goToPage: {
+      back: string
+      forward: string
+    }
   },
   contact: {
     title: string,
@@ -43,6 +51,10 @@ interface GlobalApplicationProps {
       button: string,
       success: string, 
       successMessage: string
+    },
+    goToPage: {
+      back: string
+      forward: string
     }
   },
   projects: {
@@ -58,14 +70,22 @@ interface GlobalApplicationProps {
       image: string,
       technologies: string[],
       text: string
-    }[]
+    }[],
+    goToPage: {
+      back: string
+      forward: string
+    }
   },
   skills: {
     title: string,
     subtitle?: string
     message1: string,
     message2: string,
-    text: string
+    text: string,
+    goToPage: {
+      back: string
+      forward: string
+    }
   },
 }
 

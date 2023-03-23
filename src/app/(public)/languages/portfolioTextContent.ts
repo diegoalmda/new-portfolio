@@ -15,6 +15,10 @@ const pt = {
     description: "Um desenvolvedor Full Stack apaixonado por criar aplicações interativas e proporcionar ótimas experiências aos usuários.",
     doc: "Currículo",
     file: "curriculo_diego_almeida.pdf",
+    goToPage: {
+      back: "",
+      forward: "about"
+    },
   },
   about: {
     title: "Sobre mim",
@@ -38,7 +42,11 @@ const pt = {
         title: "Udemy",
         courses: ["Curso de Javascript Completo do iniciante ao mestre", "Curso Completo do Desenvolvedor NodeJS"]
       },
-    ]
+    ],
+    goToPage: {
+      back: "/",
+      forward: "skills"
+    },
   },
   contact: {
     title: "Contato",
@@ -51,7 +59,11 @@ const pt = {
       button: "Enviar",
       success: "Mensagem enviada!", 
       successMessage: "Em breve retornarei o contato!"
-    }
+    },
+    goToPage: {
+      back: "projects",
+      forward: ""
+    },
   },
   projects: {
     title: "Projetos",
@@ -104,14 +116,22 @@ const pt = {
         technologies: ["HTML", "CSS", "ReactJS", "Next.js", "TypeScript", "SASS", "Next-Auth", "Stripe", "FaunaDB", "Prismic CMS", "Github Authentication"],
         text: "O projeto tem como objetivo o estudo e desenvolvimento de uma aplicação com ReactJS e NextJS para listagem de posts e sistema de assinatura em um blog de notícias. Onde os usuários pagam para ter acesso. O acesso às postagens é liberado quando há uma inscrição ativa no Stripe. Caso não exista assinatura ativa para o usuário logado a partir do Github, só será exibido apenas um resumo das notícias ao usuário. Os meios de pagamento da aplicação são integrados com a API do Stripe, e utilizado o FaunaDB para armazenar as informações. As postagens são exibidas a partir do CMS Prismic.io. A aplicação foi construída com modelo Serveless, sem necessidade de criar uma API externa para manipular os dados."
       },      
-    ]
+    ],
+    goToPage: {
+      back: "skills",
+      forward: "contact"
+    },
   },
   skills: {
     title: "Tecnologias",
     subtitle: "Meu trabalho",
     message1: "Logo abaixo estão mais das algumas tecnologias que uso para construir meus projetos.",
     message2: "Veja a página de projetos.",
-    text: "Crio sites responsivos com foco em usabilidade, experiência do usuário e boas práticas. A principal área de minha experiência é desenvolvimento front-end, HTML, CSS, JS, ReactJS e React Native, construindo aplicativos web de pequeno e médio porte, apps para dispositivos móveis, implantação de novos recursos e codificação de layouts interativos. Também tenho experiência como desenvolvedor full-stack com Node.js. Tenho um perfil flexível, o que me permite atuar em diversas áreas e atividades ao mesmo tempo de forma organizada, sabendo distinguir entre tarefas mais urgentes e tarefas secundárias. Atuando desta forma, consigo me manter focado quando estou sob muita demanda, o que me possibilita entregar os projetos dentro dos prazos."
+    text: "Crio sites responsivos com foco em usabilidade, experiência do usuário e boas práticas. A principal área de minha experiência é desenvolvimento front-end, HTML, CSS, JS, ReactJS e React Native, construindo aplicativos web de pequeno e médio porte, apps para dispositivos móveis, implantação de novos recursos e codificação de layouts interativos. Também tenho experiência como desenvolvedor full-stack com Node.js. Tenho um perfil flexível, o que me permite atuar em diversas áreas e atividades ao mesmo tempo de forma organizada, sabendo distinguir entre tarefas mais urgentes e tarefas secundárias. Atuando desta forma, consigo me manter focado quando estou sob muita demanda, o que me possibilita entregar os projetos dentro dos prazos.",
+    goToPage: {
+      back: "about",
+      forward: "projects"
+    },
   }
 }
 
@@ -131,7 +151,11 @@ const en = {
     message: "See more...",
     description: "A Full Stack Developer passionate about creating interactive applications and providing great user experiences.",
     doc: "Resumé",
-    file: "resume_diego_almeida.pdf"
+    file: "resume_diego_almeida.pdf",
+    goToPage: {
+      back: "",
+      forward: "about"
+    },
   },
   about: {
     title: "About me",
@@ -155,7 +179,11 @@ const en = {
         title: "Udemy",
         courses: ["Complete course of Javascript from beginner to master (2020)", "Complete course of NodeJS"]
       },
-    ]
+    ],
+    goToPage: {
+      back: "/",
+      forward: "skills"
+    },
   },
   contact: {
     title: "Contact",
@@ -168,7 +196,11 @@ const en = {
       button: "Send",
       success: "Your message has been sent!", 
       successMessage: "I'll get back to you soon!"
-    }
+    },
+    goToPage: {
+      back: "projects",
+      forward: ""
+    },
   },
   projects: {
     title: "Projects",
@@ -221,14 +253,22 @@ const en = {
         technologies: ["HTML", "CSS", "ReactJS", "Next.js", "TypeScript", "SASS", "Next-Auth", "Stripe", "FaunaDB", "Prismic CMS", "Github Authentication"],
         text: "The project aims to study and develop an application with ReactJS and NextJS to list posts and subscribe to a news blog. Where users pay for access. The access to posts is granted when there is an active Stripe subscription. If there is no active subscription for the user logged into Github, only a news summary will be shown to the user. The app's payment methods are integrated with the Stripe API, and FaunaDB is used to store the information. Posts are displayed on CMS Prismic.io. The application was built using a Serveless model, without the need to create an external API to manipulate the data."
       },      
-    ]
+    ],
+    goToPage: {
+      back: "skills",
+      forward: "contact"
+    },
   },
   skills: {
     title: "My Skills",
     subtitle: "Check out my",
     message1: "Right below are some more technologies I use to build my projects.",
     message2: "See my projects's section.",
-    text: "I create successful responsive websites with focus on usability, user experience and best practices. The main area of my expertise is front-end development, HTML, CSS, JS, ReactJS and React Native, building small and medium web apps, mobile apps, features, animations, and coding interactive layouts. I also have full-stack developer experience with Node.js."
+    text: "I create successful responsive websites with focus on usability, user experience and best practices. The main area of my expertise is front-end development, HTML, CSS, JS, ReactJS and React Native, building small and medium web apps, mobile apps, features, animations, and coding interactive layouts. I also have full-stack developer experience with Node.js.",
+    goToPage: {
+      back: "about",
+      forward: "projects"
+    },
   },
 }
 

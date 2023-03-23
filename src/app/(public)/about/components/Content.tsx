@@ -13,7 +13,7 @@ import styles from "./styles.module.scss"
 
 export function Content() {
   const { selectedLanguage } = useGlobalContext()
-  const { title, text, secondTitle, coursesData } = selectedLanguage.about
+  const { title, text, secondTitle, coursesData, goToPage } = selectedLanguage.about
 
   const renderCourse = useCallback((title: string) => {
     switch(title) {
@@ -29,7 +29,7 @@ export function Content() {
   }, [])
   
   return (
-    <PageContainer title={title}>
+    <PageContainer title={title} goToPage={goToPage}>
       <div className={styles.aboutText}>
         <p>
           {text}

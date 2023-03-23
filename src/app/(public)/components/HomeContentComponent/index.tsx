@@ -16,9 +16,10 @@ import styles from "./home.module.scss"
 
 export function HomeContentComponent() {  
   const { selectedLanguage } = useGlobalContext()
+  const { greetings, beforeName, description, file, doc, goToPage } = selectedLanguage.home
 
   return (
-    <PageContainer title="Home">
+    <PageContainer title="Home" goToPage={goToPage}>
       <div className={styles.profileImageContent}>
         <div className={styles.trianglesContainer}>
           <Image className={styles.purpleTriangle} src={profilePurpleTriangle} alt="Purple triangle" />
@@ -31,15 +32,15 @@ export function HomeContentComponent() {
       </div>
       <div className={styles.presentation}>
         <div className={styles.info}>
-          <h1>{selectedLanguage.home.greetings}</h1>
-          <h2>{selectedLanguage.home.beforeName} <span>Diego de Almeida Cunha</span></h2>
-          <p>{`${selectedLanguage.home.description} `}</p>
+          <h1>{greetings}</h1>
+          <h2>{beforeName} <span>Diego de Almeida Cunha</span></h2>
+          <p>{`${description} `}</p>
         </div>
         <Image className={styles.littleTriangle} src={littleTriangle} alt="Green triangle" />
       </div>
       <div className={styles.resumeSection}>
-        <a href={selectedLanguage.home.file} title="Diego Almeida's CV" target="_blank" rel="noopener noreferrer">
-          <CustomButton>{selectedLanguage.home.doc}</CustomButton>
+        <a href={file} title="Diego Almeida's CV" target="_blank" rel="noopener noreferrer">
+          <CustomButton>{doc}</CustomButton>
         </a>
       </div>
     </PageContainer>

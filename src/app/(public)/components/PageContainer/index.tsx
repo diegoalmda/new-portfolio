@@ -1,5 +1,6 @@
 "use client"
 
+import { useRouter } from "next/navigation"
 import { CaretLeft, CaretRight } from "phosphor-react"
 import { ReactNode, useCallback } from "react"
 import { useGlobalContext } from "../../contexts/GlobalApplicationContext"
@@ -10,10 +11,16 @@ import styles from "./styles.module.scss"
 interface PageContainerProps {
   title: string
   children: ReactNode
+  goToPage: {
+    back: string
+    forward: string
+  }
 }
 
-export function PageContainer({ title, children }: PageContainerProps) {
+export function PageContainer({ title, goToPage, children }: PageContainerProps) {
   const { selectedLanguage, selectLanguage } = useGlobalContext()
+
+  const router = useRouter()
 
   const handleSelectLanguage = useCallback((language: string) => {
     selectLanguage(language)
@@ -32,14 +39,14 @@ export function PageContainer({ title, children }: PageContainerProps) {
         {
           title.toLowerCase() !== "home" && 
           <div className={styles.arrowLeftButton}>
-            <CustomButton><CaretLeft /></CustomButton>
+            <CustomButton onClick={() => router.push(`${goToPage.back}`)}><CaretLeft /></CustomButton>
             <span>{selectedLanguage.goToPage.back}</span>
           </div>
         } 
         {
           title.toLowerCase() !== "contact" && title.toLowerCase() !== "contato" && 
           <div className={styles.arrowRightButton}>
-            <CustomButton><CaretRight /></CustomButton>
+            <CustomButton onClick={() => router.push(`${goToPage.forward}`)}><CaretRight /></CustomButton>
             <span>{selectedLanguage.goToPage.forward}</span>
           </div>
         }
