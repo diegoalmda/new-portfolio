@@ -13,12 +13,15 @@ import triangle_green from "../../assets/images/triangle-green.svg"
 import triangle_pink from "../../assets/images/triangle-pink.svg"
 
 import styles from "./styles.module.scss"
+import { CustomButton } from "../CustomButton"
 
 export function SideMenu() {
   const { selectedLanguage } = useGlobalContext()
 
   const year = new Date()
   let segment = useSelectedLayoutSegment()
+
+  console.log(segment)
 
   if(segment === null) {
     segment = "/"
@@ -44,11 +47,9 @@ export function SideMenu() {
       <div 
         className={`${styles.backgroundContainer}`}        
       >
-        <button 
-          className={styles.closeButton}
-        >
+        <CustomButton className={styles.closeButton}>
           <X />
-        </button>
+        </CustomButton>
         <Image className={styles.triangle_purple} src={triangle_purple} alt="Purple triangle image" />
         <Image className={styles.triangle_green} src={triangle_green} alt="Green triangle image" />
         <Image className={styles.triangle_pink} src={triangle_pink} alt="Pink triangle image" />

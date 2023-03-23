@@ -2,7 +2,8 @@
 
 import { CaretLeft, CaretRight } from "phosphor-react"
 import { ReactNode } from "react"
-import { QuicksandFont } from "../../fonts"
+import { useGlobalContext } from "../../contexts/GlobalApplicationContext"
+import { CustomButton } from "../CustomButton"
 
 import styles from "./styles.module.scss"
 
@@ -12,11 +13,17 @@ interface PageContainerProps {
 }
 
 export function PageContainer({ title, children }: PageContainerProps) {
+  const { selectedLanguage, selectLanguage } = useGlobalContext()
+
+  function handleSelectLanguage(language: string) {
+    selectLanguage(language)
+  }
+  
   return (
     <div className={styles.pageContentContainer}>
       <div className={styles.languageButtons}>
-        <button className={`${styles.active} ${QuicksandFont.className}`}>PT</button>
-        <button className={QuicksandFont.className}>EN</button>
+        <CustomButton onClick={() => handleSelectLanguage("pt")} className={`${selectedLanguage.selected === "pt" ? styles.active : ""}`}>PT</CustomButton>
+        <CustomButton onClick={() => handleSelectLanguage("en")} className={`${selectedLanguage.selected === "en" ? styles.active : ""}`}>EN</CustomButton>
       </div>
       {
         title.toLowerCase() !== "home" && <div className={styles.titleContent}><h1>{title}</h1><hr></hr></div>
@@ -25,15 +32,15 @@ export function PageContainer({ title, children }: PageContainerProps) {
         {
           title.toLowerCase() !== "home" && 
           <div className={styles.arrowLeftButton}>
-            <button><CaretLeft /></button>
-            <span>Voltar</span>
+            <CustomButton><CaretLeft /></CustomButton>
+            <span>{selectedLanguage.goToPage.back}</span>
           </div>
         } 
         {
           title.toLowerCase() !== "contact" && title.toLowerCase() !== "contato" && 
           <div className={styles.arrowRightButton}>
-            <button><CaretRight /></button>
-            <span>Veja mais</span>
+            <CustomButton><CaretRight /></CustomButton>
+            <span>{selectedLanguage.goToPage.forward}</span>
           </div>
         }
       </div>

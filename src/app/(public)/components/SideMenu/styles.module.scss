@@ -2,7 +2,7 @@
   color: var(--white);
 
   .backgroundContainer {
-    z-index: 0;
+    z-index: 10;
     position: fixed;
     background-color: var(--blue-800);
     box-shadow: 15px 0px 20px rgba(0, 0, 0, 0.25);
@@ -33,7 +33,7 @@
 
     @media (min-width: 421px) {
       &:hover {
-        z-index: 2;
+        z-index: 11;
         border-radius: 0 50% 120% 0 / 0 70% 100% 0;
         margin-top: -2rem;
         width: 260px;
@@ -48,7 +48,7 @@
   
         .triangle_purple {
           opacity: 1;        
-          z-index: 1;
+          z-index: 10;
           height: 6rem;
           width: 6rem;
           margin-left: 6.5rem;
@@ -57,7 +57,7 @@
         
         .triangle_green {
           opacity: 1;        
-          z-index: 1;
+          z-index: 10;
           height: 5rem;
           width: 5rem;
           margin-left: 9rem;
@@ -66,7 +66,7 @@
         
         .triangle_pink {
           opacity: 1;        
-          z-index: 1;
+          z-index: 10;
           height: 5rem;
           width: 5rem;
           margin-left: -0.5rem;
@@ -222,7 +222,7 @@
   .menuHeader {
     height: 10rem;
     max-height: 10rem;
-    z-index: 3;
+    z-index: 13;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -235,7 +235,7 @@
       right: -0.5rem;
       border-top: 30px solid transparent;
       border-bottom: 30px solid transparent;
-      z-index: 0;
+      z-index: 10;
       border-left: 20px solid var(--blue-800);
     }
     
@@ -265,6 +265,7 @@
       opacity: 1;
       
       svg {
+        z-index: 15;
         animation-name: arrowAnimation;
         animation-duration: 1.5s;
         animation-iteration-count: infinite;
@@ -282,7 +283,7 @@
 
         strong {
           font-size: 0.6rem;
-          z-index: 3;
+          z-index: 13;
         }
       }
     }
@@ -306,7 +307,7 @@
 
   .menuContent {
     margin: 2rem 0;
-    z-index: 2;
+    z-index: 12;
     flex: 1;
     width: 100%;
     
@@ -421,7 +422,7 @@
   .footer {   
     min-height: 150px; 
     width: 100%;
-    z-index: 3;
+    z-index: 13;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -459,7 +460,7 @@
     }
 
     .copyright {
-      z-index: 5;
+      z-index: 15;
       opacity: 0;
       margin: 0 0 1rem -6rem;
       transition: opacity 0.1s, margin 0.5s;

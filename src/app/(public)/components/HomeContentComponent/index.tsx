@@ -11,7 +11,7 @@ import Image from "next/image"
 
 import styles from "./home.module.scss"
 import { useGlobalContext } from "../../contexts/GlobalApplicationContext"
-import { QuicksandFont } from "../../fonts"
+import { CustomButton } from "../CustomButton"
 
 export function HomeContentComponent() {  
   const { selectedLanguage } = useGlobalContext()
@@ -38,7 +38,7 @@ export function HomeContentComponent() {
       </div>
       <div className={styles.resumeSection}>
         <a href={selectedLanguage.home.file} title="Diego Almeida's CV" target="_blank" rel="noopener noreferrer">
-          <button className={QuicksandFont.className}>{selectedLanguage.home.doc}</button>
+          <CustomButton>{selectedLanguage.home.doc}</CustomButton>
         </a>
       </div>
     </PageContainer>

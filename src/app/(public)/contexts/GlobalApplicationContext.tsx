@@ -4,6 +4,10 @@ import { portfolioContent } from "../languages/portfolioTextContent"
 
 interface GlobalApplicationProps {
   selected: string
+  goToPage: {
+    back: string
+    forward: string
+  },
   menu: {
     selectlanguage: string
     items: { title: string, link: string }[]

@@ -1,5 +1,9 @@
 const pt = {
   selected: "pt",
+  goToPage: {
+    back: "Voltar",
+    forward: "Mais"
+  },
   menu: {
     selectlanguage: "Escolha o idioma",
     items: [{ title: "Home", link: "/" }, { title: "Sobre mim", link: "about" }, { title: "Tecnologias", link: "skills" }, { title: "Projetos", link: "projects" }, { title: "Contato", link: "contact" }],
@@ -96,9 +100,13 @@ const pt = {
 
 const en = {
   selected: "en",
+  goToPage: {
+    back: "Back",
+    forward: "More"
+  },
   menu: {
     selectlanguage: "Choose language",
-    items: [{ title: "About", link: "/about" }, { title: "My Skills", link: "/skills" }, { title: "Projects", link: "/projects" }, { title: "Contact", link: "/contact" }],
+    items: [{ title: "Home", link: "/" }, { title: "About", link: "about" }, { title: "My Skills", link: "skills" }, { title: "Projects", link: "projects" }, { title: "Contact", link: "contact" }],
   },
   home: {
     greetings: "Hi There !",

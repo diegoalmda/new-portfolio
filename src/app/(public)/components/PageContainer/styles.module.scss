@@ -1,6 +1,6 @@
 .pageContentContainer {
   height: 100%;
-  width: 100%;
+  width: 100%;  
 }
 
 .pageContent {
@@ -8,6 +8,12 @@
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   animation-duration: 0.5s;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   
   @keyframes pageLoading {
     0%   {opacity: 0; margin-left: 0}
@@ -114,7 +120,7 @@
   @media (max-width: 720px) {    
     margin-left: -1.5rem; 
     span {
-      right: 0;
+      right: 0.3rem;
     } 
   }
 } 
@@ -124,10 +130,14 @@
   margin-right: -2rem;
 
   span {
-    right: 0.2rem;
+    right: 0.8rem;
   }
 
   @media (max-width: 720px) {    
     margin-right: -1.5rem; 
+
+    span {
+      right: 0.3rem;
+    }
   }
 }
