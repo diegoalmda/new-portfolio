@@ -14,6 +14,7 @@ import triangle_pink from "../../assets/images/triangle-pink.svg"
 
 import styles from "./styles.module.scss"
 import { CustomButton } from "../CustomButton"
+import { useCallback } from "react"
 
 export function SideMenu() {
   const { selectedLanguage } = useGlobalContext()
@@ -21,13 +22,11 @@ export function SideMenu() {
   const year = new Date()
   let segment = useSelectedLayoutSegment()
 
-  console.log(segment)
-
   if(segment === null) {
     segment = "/"
   }
 
-  function renderIcon(type: string) {
+  const renderIcon = useCallback((type: string) => {
     switch(type) {
     case "/": 
       return <House />
@@ -40,7 +39,7 @@ export function SideMenu() {
     case "contact": 
       return <AddressBook />    
     }
-  }
+  }, [])
 
   return (
     <section className={styles.menuContainer}>

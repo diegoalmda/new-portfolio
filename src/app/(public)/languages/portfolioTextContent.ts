@@ -19,9 +19,26 @@ const pt = {
   about: {
     title: "Sobre mim",
     subtitle: "Um pouco",
-    secondTitle: "Principais tecnologias",
+    secondTitle: "Formação acadêmica e cursos",
     message: "Veja mais...",
-    text: "Sou tecnólogo em Telemática, com mais de 3 anos de experiência atuando como desenvolvedor web. Tenho conhecimento em desenvolvimento de sistemas para Web e mobile com foco na linguagem JavaScript e bibliotecas React, React Native e Node.js. Conheço técnicas avançadas de SEO para otimização de sites e de acessibilidade, permitindo que a experiência do usuário se torne mais inclusiva. Também domino os recursos de responsividade da web, favorecendo o uso das aplicações em dispositivos com variados tamanhos de tela mantendo a mesma experiência de uso. Já trabalhei com diversos mecanismos e bibliotecas de manipulação de dados no Node.js, sejam query builders, ORMs, ou até mesmo queries SQL nativas. Também já utilizei bibliotecas de modelagem de dados para MongoDB. Possuo conhecimento avançado em Next.js, Node.js, Typescript, criação e consumo de APIs REST ou GraphQL e com desenvolvimento orientado a testes. Consigo criar uma aplicação desde o projeto do design em ferramentas como o Figma, utilizando técnicas de UX/UI, até a integração do front com o back-end e o deploy com integração e entregas contínuas. Tenho um perfil flexível, o que me permite atuar em diversas áreas e atividades ao mesmo tempo de forma organizada, sabendo distinguir entre tarefas mais urgentes e tarefas secundárias. Atuando desta forma, consigo me manter focado quando estou sob muita demanda, o que me possibilita entregar os projetos dentro dos prazos."
+    text: "Sou tecnólogo em Telemática, com mais de 3 anos de experiência atuando como desenvolvedor web. Tenho conhecimento em desenvolvimento de sistemas para Web e mobile com foco na linguagem JavaScript e bibliotecas React, React Native e Node.js. Conheço técnicas avançadas de SEO para otimização de sites e de acessibilidade, permitindo que a experiência do usuário se torne mais inclusiva. Também domino os recursos de responsividade da web. Já trabalhei com diversos mecanismos e bibliotecas de manipulação de dados no Node.js, sejam query builders, ORMs, ou até mesmo queries SQL nativas. Possuo conhecimento avançado em Next.js, Node.js, Typescript, criação e consumo de APIs REST ou GraphQL e com desenvolvimento orientado a testes. Consigo criar uma aplicação desde o projeto do design em ferramentas como o Figma, utilizando técnicas de UX/UI, até a integração do front com o back-end e o deploy com integração e entregas contínuas.",
+    coursesData: [
+      { 
+        id: "ifpb",
+        title: "Instituto Federal de Educação Ciência e Tecnologia da Paraíba",
+        courses: ["Tecnologia em Telemática"]
+      },
+      { 
+        id: "rocketseat",
+        title: "Rocketseat",
+        courses: ["Programa de treinamento Ignite trilhas React, React Native e Node.js"]
+      },
+      { 
+        id: "udemy",
+        title: "Udemy",
+        courses: ["Curso de Javascript Completo do iniciante ao mestre", "Curso Completo do Desenvolvedor NodeJS"]
+      },
+    ]
   },
   contact: {
     title: "Contato",
@@ -119,9 +136,26 @@ const en = {
   about: {
     title: "About me",
     subtitle: "Some info",
-    secondTitle: "Main technologies",
+    secondTitle: "Education",
     message: "See more...",
-    text: "I am a technologist in Telematics, with more than 3 years of experience working in Front-end. I have knowledge in web and mobile applications development focusing on JavaScript language and React and React Native libraries. I know advanced SEO techniques for website optimization and accessibility, allowing the user experience to become more inclusive. I also master web responsiveness resources, favoring the use of applications on devices with different screen sizes while maintaining a great user experience. I have advanced knowledge in Next.js, Typescript, REST APIs or GraphQL and with test-oriented development. I can create an application from the design project in tools such as Figma, using UX/UI techniques, to deployment with continuous integration and deliveries, always focusing on good practices. I have a flexible profile, which allows me to work in different areas and activities at the same time in an organized way, knowing how to distinguish between more urgent tasks and non-urgent tasks. Working this way, I can stay focused when I'm under a lot of demand, which allows me to deliver projects on time."
+    text: "I am a technologist in Telematics, with more than 3 years of experience working in Front-end. I have knowledge in web and mobile applications development focusing on JavaScript language and React and React Native libraries. I know advanced SEO techniques for website optimization and accessibility, allowing the user experience to become more inclusive. I also master web responsiveness resources, favoring the use of applications on devices with different screen sizes while maintaining a great user experience. I have advanced knowledge in Next.js, Typescript, REST APIs or GraphQL and with test-oriented development. I can create an application from the design project in tools such as Figma, using UX/UI techniques, to deployment with continuous integration and deliveries, always focusing on good practices. I have a flexible profile, which allows me to work in different areas and activities at the same time in an organized way, knowing how to distinguish between more urgent tasks and non-urgent tasks. Working this way, I can stay focused when I'm under a lot of demand, which allows me to deliver projects on time.",
+    coursesData: [
+      { 
+        id: "ifpb",
+        title: "Instituto Federal de Educação Ciência e Tecnologia da Paraíba",
+        courses: ["Telematics Technologist"]
+      },
+      { 
+        id: "rocketseat",
+        title: "Rocketseat",
+        courses: ["React, React Native and Node.js"]
+      },
+      { 
+        id: "udemy",
+        title: "Udemy",
+        courses: ["Complete course of Javascript from beginner to master (2020)", "Complete course of NodeJS"]
+      },
+    ]
   },
   contact: {
     title: "Contact",

@@ -25,7 +25,12 @@ interface GlobalApplicationProps {
     subtitle: string,
     secondTitle: string,
     message: string,
-    text: string
+    text: string,
+    coursesData: { 
+      id: string,
+      title: string,
+      courses: string[]
+    }[]
   },
   contact: {
     title: string,
@@ -85,16 +90,16 @@ function GlobalApplicationContextProvider({
   function selectLanguage(language: string) {
     if(language === "en") {
       setSelectedLanguage(en)
-      localStorage.setItem("@portfolio:language-selected", language)
+      localStorage.setItem("@portfolio-new:language-selected", language)
     } else {
       setSelectedLanguage(pt)
-      localStorage.setItem("@portfolio:language-selected", language)
+      localStorage.setItem("@portfolio-new:language-selected", language)
     }
   }
 
   useEffect(() => {
     const [getLanguageFromNavigator, ] = (navigator.language).split("-")
-    const storedLanguage = localStorage.getItem("@portfolio:language-selected")
+    const storedLanguage = localStorage.getItem("@portfolio-new:language-selected")
 
     if(!storedLanguage) {
       setSelectedLanguage(getLanguageFromNavigator === "pt" ? pt : en)

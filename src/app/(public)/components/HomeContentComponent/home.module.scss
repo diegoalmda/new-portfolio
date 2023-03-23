@@ -107,6 +107,7 @@
 
   .littleTriangle {
     width: 6rem;
+    height: auto;
     margin: 2rem;
 
     @media (max-width: 720px) {
@@ -134,7 +135,7 @@
   
     p {
       font-size: 1.2rem;
-      font-weight: 700;
+      font-weight: 600;
     }
 
     @media (max-width: 720px) {

@@ -1,7 +1,7 @@
 "use client"
 
 import { CaretLeft, CaretRight } from "phosphor-react"
-import { ReactNode } from "react"
+import { ReactNode, useCallback } from "react"
 import { useGlobalContext } from "../../contexts/GlobalApplicationContext"
 import { CustomButton } from "../CustomButton"
 
@@ -15,9 +15,9 @@ interface PageContainerProps {
 export function PageContainer({ title, children }: PageContainerProps) {
   const { selectedLanguage, selectLanguage } = useGlobalContext()
 
-  function handleSelectLanguage(language: string) {
+  const handleSelectLanguage = useCallback((language: string) => {
     selectLanguage(language)
-  }
+  }, [selectedLanguage])
   
   return (
     <div className={styles.pageContentContainer}>

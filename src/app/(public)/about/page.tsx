@@ -5,9 +5,5 @@ export const metadata = {
 }
 
 export default function About() {
-  return (
-    <>
-      <Content />
-    </>
-  )
+  return <Content />
 }
