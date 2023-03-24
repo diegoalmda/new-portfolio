@@ -1,9 +1,9 @@
-"use client"
+import { Content } from "./components/Content"
+
+export const metadata = {
+  title: "Diego Almeida - Contact",
+}
 
 export default function Contact() {
-  return (
-    <>
-      <h2>Página de Contato</h2>
-    </>
-  )
+  return <Content />
 }

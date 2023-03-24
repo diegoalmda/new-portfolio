@@ -4,7 +4,7 @@ const nextConfig = {
     appDir: true,
   },
   env: {
-    NEXT_PUBLIC_IMAGES_SKILLS: "/assets"
+    NEXT_PUBLIC_IMAGES: "/assets"
   }
 }
 

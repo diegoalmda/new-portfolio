@@ -1,9 +1,9 @@
-"use client"
+import { Content } from "./components/Content"
+
+export const metadata = {
+  title: "Diego Almeida - Projects",
+}
 
 export default function Projects() {
-  return (
-    <>
-      <h2>Página de projetos</h2>
-    </>
-  )
+  return <Content />
 }

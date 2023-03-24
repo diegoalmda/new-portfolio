@@ -1,0 +1,43 @@
+.projectsText {
+  font-weight: 600;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.filterProjects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 2rem 0;
+  
+  strong {
+    color: var(--purple-500);
+  }
+
+  .selected {
+    background-color: var(--blue-500);
+    color: var(--white);
+  }
+
+  button {
+    display: inline-block;
+    border: none;
+    font-weight: 600;
+    background-color: var(--blue-300-40);
+    margin: 0.5rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 10px;
+    color: var(--purple-800);
+    
+    &:hover {
+      background-color: var(--purple-800-40);
+    }
+    
+    @media (max-width: 720px) {
+      margin: 0.2rem;
+    }
+  }
+}

@@ -62,10 +62,13 @@ interface GlobalApplicationProps {
     subtitle: string,
     message1: string,
     message2: string,
+    filter: string,
+    filterBy: string[],    
     list: {
       name: string,
       live?: string,
       repo?: string,
+      figma?: string,
       message?: string,
       image: string,
       technologies: string[],

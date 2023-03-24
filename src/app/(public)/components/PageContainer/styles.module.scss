@@ -17,6 +17,14 @@
 }
 
 .titleContent {
+  @keyframes titleOpacity {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+  animation-name: titleOpacity;
+  animation-duration: 1.5s;
+
   hr {
     background-color: var(--purple-500);
     border: none;
@@ -41,6 +49,10 @@
     background-color: transparent;
     color: var(--purple-800);
     font-weight: 600;
+
+    @media (max-width: 720px) {
+      padding: 0.2rem 0.5rem;
+    }
     
     &:hover {
       background-color: var(--purple-800-40);

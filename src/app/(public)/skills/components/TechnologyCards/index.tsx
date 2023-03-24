@@ -11,7 +11,7 @@ export function TechnologyCards() {
         mySkills.map(skill => {
           return (
             <div className={styles.contentCard} key={skill.title}>
-              <img src={`${process.env.NEXT_PUBLIC_IMAGES_SKILLS}/${skill.image}`} alt={skill.alt} title={skill.title} />
+              <img src={`${process.env.NEXT_PUBLIC_IMAGES}/${skill.image}`} alt={skill.alt} title={skill.title} />
             </div>
           )
         })
