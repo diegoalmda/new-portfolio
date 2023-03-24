@@ -1,7 +1,7 @@
 "use client"
 
 import { useGlobalContext } from "@/app/(public)/contexts/GlobalApplicationContext"
-import Gallery from "react-photo-gallery"
+import Gallery from "react-photo-album"
 
 import styles from "./projects.module.scss"
 
@@ -69,5 +69,5 @@ export function ProjectsList() {
 
   // const project
 
-  return <Gallery photos={projects} />
+  return <Gallery layout="rows" photos={projects} />
 }
