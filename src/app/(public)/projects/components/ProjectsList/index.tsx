@@ -1,9 +1,9 @@
 "use client"
 
-import { useGlobalContext } from "@/app/(public)/contexts/GlobalApplicationContext"
+// import { useGlobalContext } from "@/app/(public)/contexts/GlobalApplicationContext"
 import Gallery from "react-photo-album"
 
-import styles from "./projects.module.scss"
+// import styles from "./projects.module.scss"
 
 export const projects = [
   {
@@ -64,8 +64,8 @@ export const projects = [
 ]
 
 export function ProjectsList() {
-  const { selectedLanguage } = useGlobalContext()
-  const { list } = selectedLanguage.projects
+  // const { selectedLanguage } = useGlobalContext()
+  // const { list } = selectedLanguage.projects
 
   // const project
 

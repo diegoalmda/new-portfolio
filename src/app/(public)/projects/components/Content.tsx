@@ -6,8 +6,6 @@ import { ProjectsList } from "./ProjectsList"
 
 import styles from "./styles.module.scss"
 
-import projects from "./ProjectsList/projects"
-
 export function Content() {
   const { selectedLanguage } = useGlobalContext()
   const { title, message1, message2, goToPage, filter, filterBy } = selectedLanguage.projects
@@ -33,7 +31,7 @@ export function Content() {
             })
           }
         </div>
-        <ProjectsList />
+        {/* <ProjectsList /> */}
       </div>
     </PageContainer>
   )
