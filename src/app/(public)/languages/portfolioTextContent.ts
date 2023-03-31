@@ -75,9 +75,9 @@ const pt = {
     list: [
       {
         name: "Projeto Petshop",
-        live: "https://www.figma.com/file/XlutnqhOjVf8PRRpm32MGt/PetShop?node-id=3%3A9&t=4yeRYg5vEhO9le9O-1",
+        live: "",
         repo: "",
-        figma: "",
+        figma: "https://www.figma.com/file/XlutnqhOjVf8PRRpm32MGt/PetShop?node-id=3%3A9&t=4yeRYg5vEhO9le9O-1",
         message: "Código em breve!",
         image: "projects/petshop.png",
         technologies: ["Figma"],
@@ -219,9 +219,9 @@ const en = {
     list: [
       {
         name: "Petshop",
-        live: "https://www.figma.com/file/XlutnqhOjVf8PRRpm32MGt/PetShop?node-id=3%3A9&t=4yeRYg5vEhO9le9O-1",
+        live: "",
         repo: "",
-        figma: "",
+        figma: "https://www.figma.com/file/XlutnqhOjVf8PRRpm32MGt/PetShop?node-id=3%3A9&t=4yeRYg5vEhO9le9O-1",
         message: "Coming soon!",
         image: "projects/petshop.png",
         technologies: ["Figma"],

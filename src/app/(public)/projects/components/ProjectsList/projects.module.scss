@@ -9,6 +9,7 @@
   overflow: hidden;
   border-radius: 10px;
   padding: 1rem;
+  min-height: 300px;
 
   @media (max-width: 720px) {
     padding: 0.5rem;
@@ -24,6 +25,16 @@
     height: 210px;
     perspective: 1000px; 
     background-color: transparent;
+
+    animation-name: imagesLoading;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    animation-duration: 2.9s;
+    
+    @keyframes imagesLoading {
+      0%   {opacity: 0;}
+      100% {opacity: 1;}
+    }
 
     @media (max-width: 448px) {
       width: 260px;

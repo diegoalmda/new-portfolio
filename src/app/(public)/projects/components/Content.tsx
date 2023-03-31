@@ -1,15 +1,33 @@
 "use client"
 
+import { useCallback, useState } from "react"
 import { CustomButton } from "../../components/CustomButton"
 import { PageContainer } from "../../components/PageContainer"
 import { useGlobalContext } from "../../contexts/GlobalApplicationContext"
+import { ProjectProps } from "./projectModal"
 import { ProjectsList } from "./ProjectsList"
 
 import styles from "./styles.module.scss"
 
 export function Content() {
   const { selectedLanguage } = useGlobalContext()
-  const { title, message1, message2, goToPage, filter, filterBy } = selectedLanguage.projects
+  const { title, message1, message2, goToPage, filter, filterBy, list } = selectedLanguage.projects
+  const [filteredList, setFilteredList] = useState(list)
+
+  const handleFilteredProjects = useCallback((category: string) => {
+    if(category !== "All" && category !== "Todos") {
+      const filtered = list.reduce((filtered: ProjectProps[], actual: ProjectProps) => {
+        const currentProject = actual.technologies.filter(technology => technology.toUpperCase() === category.toUpperCase())
+        if(currentProject.length > 0) {
+          filtered.push(actual)
+        }
+        return filtered
+      }, [])
+      setFilteredList(filtered)
+    } else {
+      setFilteredList(list)
+    }
+  }, [list])
   
   return (
     <PageContainer title={title} goToPage={goToPage}>
@@ -27,13 +45,13 @@ export function Content() {
           {
             filterBy.map((category) => {
               return (
-                <CustomButton key={category}>{category}</CustomButton>
+                <CustomButton key={category} onClick={() => handleFilteredProjects(category)}>{category}</CustomButton>
               )
             })
           }
         </div>
       </div>
-      <ProjectsList />
+      <ProjectsList list={filteredList} />
     </PageContainer>
   )
 }
