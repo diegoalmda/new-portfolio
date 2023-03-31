@@ -59,7 +59,7 @@ interface GlobalApplicationProps {
   },
   projects: {
     title: string,
-    subtitle: string,
+    buttonText: string,
     message1: string,
     message2: string,
     filter: string,

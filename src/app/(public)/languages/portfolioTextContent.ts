@@ -67,7 +67,7 @@ const pt = {
   },
   projects: {
     title: "Projetos",
-    subtitle: "Alguns",
+    buttonText: "Veja mais",
     message1: "Você pode ver mais informações sobre mim no ",
     message2: " e o repositório de outros projetos no ",
     filter: "Filtro:",
@@ -211,7 +211,7 @@ const en = {
   },
   projects: {
     title: "Projects",
-    subtitle: "Some of my",
+    buttonText: "Learn more",
     message1: "You can see more information about me on ",
     message2: " and some other project's code on ",
     filter: "Filter:",

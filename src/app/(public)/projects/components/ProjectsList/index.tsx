@@ -8,7 +8,7 @@ import styles from "./projects.module.scss"
 
 export function ProjectsList() {
   const { selectedLanguage } = useGlobalContext()
-  const { list } = selectedLanguage.projects
+  const { list, buttonText } = selectedLanguage.projects
 
   // style={{ "backgroundImage": `url('${process.env.NEXT_PUBLIC_IMAGES}/${project.image}')`}}
 
@@ -23,8 +23,8 @@ export function ProjectsList() {
                   <img src={`${process.env.NEXT_PUBLIC_IMAGES}/${project.image}`} alt={project.name} title={project.name} />
                 </div>
                 <div className={styles.backCardContainer}>
-                  <p>{project.name}</p>
-                  <CustomButton>Abrir</CustomButton>
+                  <h4>{project.name}</h4>
+                  <CustomButton>{buttonText}</CustomButton>
                 </div>
               </div>
             </div>
