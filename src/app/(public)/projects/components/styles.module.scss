@@ -11,7 +11,7 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  margin: 2rem 0;
+  margin: 2rem 0 0.5rem 0;
   
   strong {
     color: var(--purple-500);
@@ -20,6 +20,13 @@
   .selected {
     background-color: var(--blue-500);
     color: var(--white);
+  }
+
+  .filterBy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
   button {

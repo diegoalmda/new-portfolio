@@ -1,5 +1,6 @@
 "use client"
 
+import { CustomButton } from "../../components/CustomButton"
 import { PageContainer } from "../../components/PageContainer"
 import { useGlobalContext } from "../../contexts/GlobalApplicationContext"
 import { ProjectsList } from "./ProjectsList"
@@ -26,13 +27,13 @@ export function Content() {
           {
             filterBy.map((category) => {
               return (
-                <button key={category}>{category}</button>
+                <CustomButton key={category}>{category}</CustomButton>
               )
             })
           }
         </div>
-        {/* <ProjectsList /> */}
       </div>
+      <ProjectsList />
     </PageContainer>
   )
 }

@@ -1,3 +1,90 @@
 .container {
+  background-color: var(--blue-500);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  // height: 60vh;
+  // border: 3px solid black;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 1rem;
+
+  @media (max-width: 420px) {
+    padding: 0.5rem;
+  }
+
+  .flipContainer {
+    display: inline-block;
+    width: 320px;
+    height: 210px;
+    perspective: 1000px; 
+    background-color: transparent;
+  }
+  
+  .flipperCard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flipContainer:nth-child(odd):hover .flipperCard{
+    transform: rotateY(180deg);
+  }
+  
+  .flipContainer:nth-child(even):hover .flipperCard{
+    transform: rotateX(180deg);
+  }
+
+  .flipContainer:nth-child(even) .backCardContainer{
+    transform: rotateX(180deg);
+  }
+  
+  .frontCardContainer, .backCardContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .backCardContainer {
+    transform: rotateY(180deg);
+    background-color: var(--purple-800);
+    color: var(--white);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .frontCardContainer {
+    flex: 1;
+    min-width: 320px;
+    max-width: 320px;
+    padding: 0.2rem;
+    padding-bottom: 0;
+    display: inline-block;
+    height: auto;
+    
+    @media (max-width: 900px) {
+      min-width: 250px;
+    }
+    
+    @media (max-width: 420px) {
+      min-width: 160px;
+    }
+    
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 
 }
+
