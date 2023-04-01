@@ -1,4 +1,4 @@
-
+import Image from "next/image"
 
 import styles from "./cards.module.scss"
 
@@ -11,7 +11,13 @@ export function TechnologyCards() {
         mySkills.map(skill => {
           return (
             <div className={styles.contentCard} key={skill.title}>
-              <img src={`${process.env.NEXT_PUBLIC_IMAGES}/${skill.image}`} alt={skill.alt} title={skill.title} />
+              <Image 
+                width={60}
+                height={60}
+                src={`${process.env.NEXT_PUBLIC_IMAGES}/${skill.image}`} 
+                alt={skill.alt} 
+                title={skill.title} 
+              />
             </div>
           )
         })

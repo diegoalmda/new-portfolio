@@ -7,6 +7,7 @@ import { useGlobalContext } from "@/app/(public)/contexts/GlobalApplicationConte
 import { ProjectModal, ProjectProps } from "../projectModal"
 
 import styles from "./projects.module.scss"
+import Image from "next/image"
 
 interface ProjectsListProps {
   list: ProjectProps[]
@@ -37,7 +38,13 @@ export function ProjectsList({ list }: ProjectsListProps) {
               <div key={project.name} className={styles.flipContainer}>
                 <div className={styles.flipperCard}>
                   <div className={styles.frontCardContainer}>
-                    <img src={`${process.env.NEXT_PUBLIC_IMAGES}/${project.image}`} alt={project.name} title={project.name} />
+                    <Image 
+                      width={320}
+                      height={210}
+                      src={`${process.env.NEXT_PUBLIC_IMAGES}/${project.image}`} 
+                      alt={project.name} 
+                      title={project.name} 
+                    />
                   </div>
                   <div className={styles.backCardContainer}>
                     <h4>{project.name}</h4>
