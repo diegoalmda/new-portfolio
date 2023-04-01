@@ -44,7 +44,7 @@ export function Content() {
                 <div key={institution.title} className={styles.courseItem}>
                   <Image src={renderCourse(institution.id)} alt={institution.title}/>
                   <div className={styles.courseInfo}>
-                    <h4>{institution.title}</h4>
+                    <h3>{institution.title}</h3>
                     {
                       institution?.courses.map(course => {
                         return (

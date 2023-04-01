@@ -40,9 +40,9 @@ export function Content() {
       <div className={styles.projectsText}>
         <p className="main-message">
           {message1}
-          <a href="https://www.linkedin.com/in/diegoalmda/" target="_blank" aria-label="Go to Diego Almeida's linkedin profile" rel="noreferrer">LinkedIn</a>
+          <a href={`${selectedLanguage.selected === "pt" ? "https://www.linkedin.com/in/diegoalmda/" : "https://www.linkedin.com/in/diegoalmda/?locale=en_US"}`} aria-label={selectedLanguage.selected === "en" ? "Link to Diego Almeida's Linkedin profile page" : "Abrir página do perfil de Diego Almeida no Linkedin"} target="_blank" rel="noopener noreferrer">LinkedIn</a>
           {message2}
-          <a href="https://github.com/diegoalmda" target="_blank" aria-label="Go to Diego Almeida's github profile" rel="noreferrer">GitHub</a>.
+          <a href="https://github.com/diegoalmda" target="_blank" aria-label={selectedLanguage.selected === "en" ? "Link to Diego Almeida's Github profile page" : "Abrir página do perfil de Diego Almeida no Github"} rel="noopener noreferrer">GitHub</a>.
         </p>
       </div>
       <div className={styles.filterProjects}>
@@ -52,7 +52,8 @@ export function Content() {
             filterBy.map((category) => {
               return (
                 <CustomButton 
-                  key={category} 
+                  key={category}
+                  aria-label={selectedLanguage.selected === "en" ? `${category} filter` : `Filtro ${category}`}
                   className={`${selectedCategory === category ? styles.selected : selectedCategory === "All" && category === "Todos" || selectedCategory === "Todos" && category === "All" ? styles.selected : ""}`}
                   onClick={() => handleFilteredProjects(category)}
                 >

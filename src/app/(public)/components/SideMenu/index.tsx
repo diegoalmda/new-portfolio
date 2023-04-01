@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { House, User, Desktop, SuitcaseSimple, AddressBook, LinkedinLogo, GithubLogo, CaretRight, X } from "phosphor-react"
+import { House, User, Desktop, SuitcaseSimple, AddressBook, LinkedinLogo, GithubLogo, CaretRight } from "phosphor-react"
 import { useSelectedLayoutSegment } from "next/navigation"
 
 import { useGlobalContext } from "../../contexts/GlobalApplicationContext"
@@ -13,7 +13,6 @@ import triangle_green from "../../assets/images/triangle-green.svg"
 import triangle_pink from "../../assets/images/triangle-pink.svg"
 
 import styles from "./styles.module.scss"
-import { CustomButton } from "../CustomButton"
 import { useCallback } from "react"
 
 export function SideMenu() {
@@ -46,9 +45,6 @@ export function SideMenu() {
       <div 
         className={`${styles.backgroundContainer}`}        
       >
-        <CustomButton className={styles.closeButton}>
-          <X />
-        </CustomButton>
         <Image className={styles.triangle_purple} src={triangle_purple} alt="Purple triangle image" />
         <Image className={styles.triangle_green} src={triangle_green} alt="Green triangle image" />
         <Image className={styles.triangle_pink} src={triangle_pink} alt="Pink triangle image" />
@@ -67,11 +63,13 @@ export function SideMenu() {
             {selectedLanguage?.menu?.items.map(item => {
               return (
                 <li key={item.title}>
-                  <Link 
+                  <Link
+                    tabIndex={0}
                     href={`${item.link}`} 
                     className={`${segment === item.link ? styles.active : ""}`}
                     title={`${item.title}`}
-                    aria-label={`Got to ${item.title}`}
+                    aria-label={selectedLanguage.selected === "en" ? `Go to ${item.title} page` : `Navegar para página ${item.title}`}
+                    
                   >
                     { renderIcon(item.link) }
                     <span>{item.title}</span>
@@ -84,10 +82,10 @@ export function SideMenu() {
         <div className={styles.footer}>
           <ul className={styles.socialContent}>
             <li>
-              <a href="https://github.com/diegoalmda" target="__blank"><strong><GithubLogo /></strong><span>GitHub</span></a>
+              <a href="https://github.com/diegoalmda" aria-label={selectedLanguage.selected === "en" ? "Link to Diego Almeida's Github profile page" : "Abrir página do perfil de Diego Almeida no Github"} target="__blank" rel="noopener noreferrer"><strong><GithubLogo /></strong><span>GitHub</span></a>
             </li>
             <li>
-              <a href={`${selectedLanguage.selected === "pt" ? "https://www.linkedin.com/in/diegoalmda/" : "https://www.linkedin.com/in/diegoalmda/?locale=en_US"}`} target="__blank"><strong><LinkedinLogo /></strong><span>LinkedIn</span></a>
+              <a href={`${selectedLanguage.selected === "pt" ? "https://www.linkedin.com/in/diegoalmda/" : "https://www.linkedin.com/in/diegoalmda/?locale=en_US"}`} aria-label={selectedLanguage.selected === "en" ? "Link to Diego Almeida's Linkedin profile page" : "Abrir página do perfil de Diego Almeida no Linkedin"} target="__blank" rel="noopener noreferrer"><strong><LinkedinLogo /></strong><span>LinkedIn</span></a>
             </li>
           </ul>
           <div className={styles.copyright}>

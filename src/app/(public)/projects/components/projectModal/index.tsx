@@ -35,7 +35,12 @@ export function ProjectModal({ projectData, language, handleHideModal }: Project
       <div className={styles.modalContent}>
         <div className={styles.modalHeader}>
           <h2>{name}</h2>
-          <CustomButton onClick={handleCloseModal}><X /></CustomButton>          
+          <CustomButton 
+            aria-label={language === "en" ? "Close modal" : "Fechar modal"} 
+            onClick={handleCloseModal}
+          >
+            <X />
+          </CustomButton>          
         </div>
         <div className={styles.projectContent}>
           <div className={styles.technologiesList}>
@@ -56,9 +61,45 @@ export function ProjectModal({ projectData, language, handleHideModal }: Project
           </div>
           <div className={styles.linkButtons}>
             { figma === "" && repo === "" && live === "" && <small className={styles.alertMessage}>{`${language === "en" ? "No link yet": "Ainda não foi disponibilizado links de acesso ao projeto."}`}</small> }
-            { figma !== "" && <a className={styles.figmaButton} href={figma} target="__blank">Figma</a>}
-            { repo !== "" && <a className={styles.repoButton} href={repo} target="__blank">Repo</a>}
-            { live !== "" && <a className={styles.liveButton} href={live} target="__blank">{`${language === "en" ? "Live": "Acessar"}`}</a>}        
+            { 
+              figma !== "" && 
+              <a 
+                aria-label={language === "en" ? "Link to the project's design page" : "Abrir a página do design do projeto"}
+                tabIndex={0} 
+                className={styles.figmaButton} 
+                href={figma} 
+                target="__blank"
+                rel="noopener noreferrer"
+              >
+                Figma
+              </a>
+            }
+            { 
+              repo !== "" && 
+              <a 
+                aria-label={language === "en" ? "Link to the project's repository page" : "Abrir a página do repositório do projeto"}
+                tabIndex={0} 
+                className={styles.repoButton} 
+                href={repo} 
+                target="__blank"
+                rel="noopener noreferrer"
+              >
+                Repo
+              </a>
+            }
+            { 
+              live !== "" && 
+              <a 
+                aria-label={language === "en" ? "Link to the project's live page" : "Abrir a página do projeto online"}
+                tabIndex={0} 
+                className={styles.liveButton} 
+                href={live} 
+                target="__blank"
+                rel="noopener noreferrer"
+              >
+                {`${language === "en" ? "Live": "Acessar"}`}
+              </a>
+            }      
           </div>
           <div className={styles.projectInfo}>
             {projectData.text}

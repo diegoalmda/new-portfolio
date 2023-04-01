@@ -47,8 +47,9 @@ export function ProjectsList({ list }: ProjectsListProps) {
                     />
                   </div>
                   <div className={styles.backCardContainer}>
-                    <h4>{project.name}</h4>
+                    <h2>{project.name}</h2>
                     <CustomButton
+                      arial-label={buttonText}
                       onClick={() => handleShowProjectDetails(project)}
                     >
                       {buttonText}

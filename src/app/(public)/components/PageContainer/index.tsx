@@ -29,8 +29,20 @@ export function PageContainer({ title, goToPage, children }: PageContainerProps)
   return (
     <div className={styles.pageContentContainer}>
       <div className={styles.languageButtons}>
-        <CustomButton onClick={() => handleSelectLanguage("pt")} className={`${selectedLanguage.selected === "pt" ? styles.active : ""}`}>PT</CustomButton>
-        <CustomButton onClick={() => handleSelectLanguage("en")} className={`${selectedLanguage.selected === "en" ? styles.active : ""}`}>EN</CustomButton>
+        <CustomButton
+          aria-label={selectedLanguage.selected === "en" ? "Select language portuguese" : "Selecionar idioma português"}
+          onClick={() => handleSelectLanguage("pt")} 
+          className={`${selectedLanguage.selected === "pt" ? styles.active : ""}`}
+        >
+          PT
+        </CustomButton>
+        <CustomButton 
+          aria-label={selectedLanguage.selected === "en" ? "Select language english" : "Selecionar idioma inglês"}
+          onClick={() => handleSelectLanguage("en")} 
+          className={`${selectedLanguage.selected === "en" ? styles.active : ""}`}
+        >
+          EN
+        </CustomButton>
       </div>
       {
         title.toLowerCase() !== "home" && <div className={styles.titleContent}><h1>{title}</h1><hr></hr></div>
@@ -39,14 +51,24 @@ export function PageContainer({ title, goToPage, children }: PageContainerProps)
         {
           title.toLowerCase() !== "home" && 
           <div className={styles.arrowLeftButton}>
-            <CustomButton onClick={() => router.push(`${goToPage.back}`)}><CaretLeft /></CustomButton>
+            <CustomButton 
+              aria-label={selectedLanguage.selected === "en" ? `Go back to ${goToPage.back} page` : `Voltar para página ${goToPage.back}`} 
+              onClick={() => router.push(`${goToPage.back}`)}
+            >
+              <CaretLeft />
+            </CustomButton>
             <span>{selectedLanguage.goToPage.back}</span>
           </div>
         } 
         {
           title.toLowerCase() !== "contact" && title.toLowerCase() !== "contato" && 
           <div className={styles.arrowRightButton}>
-            <CustomButton onClick={() => router.push(`${goToPage.forward}`)}><CaretRight /></CustomButton>
+            <CustomButton 
+              aria-label={selectedLanguage.selected === "en" ? `Go to ${goToPage.forward} page` : `Navegar para página ${goToPage.forward}`} 
+              onClick={() => router.push(`${goToPage.forward}`)}
+            >
+              <CaretRight />
+            </CustomButton>
             <span>{selectedLanguage.goToPage.forward}</span>
           </div>
         }
