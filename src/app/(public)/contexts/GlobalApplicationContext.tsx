@@ -46,6 +46,7 @@ interface GlobalApplicationProps {
     message: string,
     form: {
       name: string,
+      mail: string,
       subject: string,
       message: string,
       button: string,

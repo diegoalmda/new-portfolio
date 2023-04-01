@@ -54,6 +54,7 @@ const pt = {
     message: "Resido na cidade de Curitiba e estou aberto a propostas de trabalho em período integral. Estou disponível para trabalho presencial, híbrido ou remoto. Entre em contato.",
     form: {
       name: "Nome",
+      mail: "E-mail",
       subject: "Assunto",
       message: "Mensagem",
       button: "Enviar",
@@ -198,6 +199,7 @@ const en = {
     message: "I'm a Brazilian developer who lives in the state of Paraná. I am open to full-time positions. Contact me.",
     form: {
       name: "Name",
+      mail: "Email",
       subject: "Subject",
       message: "Message",
       button: "Send",

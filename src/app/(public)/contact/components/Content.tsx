@@ -8,6 +8,7 @@ import { PageContainer } from "../../components/PageContainer"
 import { useGlobalContext } from "../../contexts/GlobalApplicationContext"
 
 import styles from "./styles.module.scss"
+import { CustomButton } from "../../components/CustomButton"
 
 export function Content() {
   const { selectedLanguage } = useGlobalContext()
@@ -53,7 +54,7 @@ export function Content() {
               name="email"
               value={formEmail}
               onChange={(e) => setFormEmail(e.target.value)}
-              placeholder="E-mail *"
+              placeholder={`${form.mail} *`}
               required aria-required 
             />
           </div>
@@ -76,12 +77,15 @@ export function Content() {
             />
           </div>
           <div className={styles.fullWidthElement}>
-            <button 
+            <CustomButton 
               type="submit" 
+              aria-label={form.button}
               disabled={state.submitting}
             >
-              {form.button}
-            </button>
+              <small>
+                {form.button}
+              </small>
+            </CustomButton>
           </div>
         </form>
       </div>
