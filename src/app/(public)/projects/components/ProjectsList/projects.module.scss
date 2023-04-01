@@ -9,7 +9,7 @@
   overflow: hidden;
   border-radius: 10px;
   padding: 1rem;
-  min-height: 300px;
+  min-height: 250px;
 
   @media (max-width: 720px) {
     padding: 0.5rem;
@@ -17,6 +17,11 @@
   
   @media (max-width: 420px) {
     padding: 0.2rem;
+  }
+
+  .alertMessage {
+    padding: 2rem;
+    text-align: center;
   }
 
   .flipContainer {

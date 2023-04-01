@@ -98,6 +98,10 @@
             filter: brightness(1.2);
           }
         }
+
+        .alertMessage {
+          color: #FF0000;
+        }
   
         .figmaButton {
           background-color: var(--pink-500-70);

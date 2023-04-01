@@ -1,6 +1,6 @@
 "use client"
 
-import { useCallback, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import { CustomButton } from "../../components/CustomButton"
 import { PageContainer } from "../../components/PageContainer"
 import { useGlobalContext } from "../../contexts/GlobalApplicationContext"
@@ -10,11 +10,13 @@ import { ProjectsList } from "./ProjectsList"
 import styles from "./styles.module.scss"
 
 export function Content() {
-  const { selectedLanguage } = useGlobalContext()
+  const { selectedLanguage, selectLanguage } = useGlobalContext()
+  const [selectedCategory, setSelectedCategory] = useState(`${selectedLanguage.selected === "en" ? "All" : "Todos"}`)
   const { title, message1, message2, goToPage, filter, filterBy, list } = selectedLanguage.projects
   const [filteredList, setFilteredList] = useState(list)
 
   const handleFilteredProjects = useCallback((category: string) => {
+    setSelectedCategory(category)
     if(category !== "All" && category !== "Todos") {
       const filtered = list.reduce((filtered: ProjectProps[], actual: ProjectProps) => {
         const currentProject = actual.technologies.filter(technology => technology.toUpperCase() === category.toUpperCase())
@@ -27,7 +29,11 @@ export function Content() {
     } else {
       setFilteredList(list)
     }
-  }, [list])
+  }, [list, setFilteredList])
+
+  useEffect(() => {
+    handleFilteredProjects(selectedCategory)
+  }, [selectLanguage])
   
   return (
     <PageContainer title={title} goToPage={goToPage}>
@@ -45,7 +51,13 @@ export function Content() {
           {
             filterBy.map((category) => {
               return (
-                <CustomButton key={category} onClick={() => handleFilteredProjects(category)}>{category}</CustomButton>
+                <CustomButton 
+                  key={category} 
+                  className={`${selectedCategory === category ? styles.selected : selectedCategory === "All" && category === "Todos" || selectedCategory === "Todos" && category === "All" ? styles.selected : ""}`}
+                  onClick={() => handleFilteredProjects(category)}
+                >
+                  {category}
+                </CustomButton>
               )
             })
           }

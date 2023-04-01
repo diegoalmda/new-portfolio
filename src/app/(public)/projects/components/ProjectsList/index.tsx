@@ -31,7 +31,7 @@ export function ProjectsList({ list }: ProjectsListProps) {
   return (
     <>
       <div className={styles.container}>
-        { list.length === 0 ? <p>{`${selectedLanguage.selected === "en" ? "No projects found.": "Nenhum projeto para esta categoria."}`}</p> :       
+        { list.length === 0 ? <small className={styles.alertMessage}>{`${selectedLanguage.selected === "en" ? "No projects found.": "Nenhum projeto para esta categoria."}`}</small> :       
           list.map(project => {
             return (
               <div key={project.name} className={styles.flipContainer}>

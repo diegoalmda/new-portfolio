@@ -55,6 +55,7 @@ export function ProjectModal({ projectData, language, handleHideModal }: Project
             <Image src={`${process.env.NEXT_PUBLIC_IMAGES}/${image}`} width={320}  height={210} alt={name} title={name} />
           </div>
           <div className={styles.linkButtons}>
+            { figma === "" && repo === "" && live === "" && <small className={styles.alertMessage}>{`${language === "en" ? "No link yet": "Ainda não foi disponibilizado links de acesso ao projeto."}`}</small> }
             { figma !== "" && <a className={styles.figmaButton} href={figma} target="__blank">Figma</a>}
             { repo !== "" && <a className={styles.repoButton} href={repo} target="__blank">Repo</a>}
             { live !== "" && <a className={styles.liveButton} href={live} target="__blank">{`${language === "en" ? "Live": "Acessar"}`}</a>}        
