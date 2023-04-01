@@ -4,7 +4,8 @@ const nextConfig = {
     appDir: true,
   },
   env: {
-    NEXT_PUBLIC_IMAGES: "/assets"
+    NEXT_PUBLIC_IMAGES: "/assets",
+    FORM_KEY: "xwkzbjqz",
   }
 }
 
