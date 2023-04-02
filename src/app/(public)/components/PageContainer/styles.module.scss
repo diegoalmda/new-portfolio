@@ -4,11 +4,11 @@
 }
 
 .pageContent {
+  padding-bottom: 2rem;
   animation-name: pageLoading;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   animation-duration: 0.5s;
-  padding-bottom: 2rem;
   
   @keyframes pageLoading {
     0%   {opacity: 0; margin-left: 0; margin-right: 0}
