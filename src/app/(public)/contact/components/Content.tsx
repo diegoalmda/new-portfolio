@@ -7,18 +7,20 @@ import { zodResolver } from "@hookform/resolvers/zod"
 
 import { PageContainer } from "../../components/PageContainer"
 import { useGlobalContext } from "../../contexts/GlobalApplicationContext"
+import swal from "sweetalert"
 
 import styles from "./styles.module.scss"
 import { CustomButton } from "../../components/CustomButton"
+import { useEffect } from "react"
 
 const sendMessageFormSchema= z.object({
   name: z.string()
-    .min(3, { message: "At least 3 letters." })
-    .transform(name => {
-      return name.trim().split(" ").map(word => {
-        return word[0].toLocaleLowerCase().concat(word.substring(1))
-      }).join(" ")
-    }),
+    .min(3, { message: "At least 3 letters." }),
+  // .transform(name => {
+  //   return name.trim().split(" ").map(word => {
+  //     return word[0].toLocaleLowerCase().concat(word.substring(1))
+  //   }).join(" ")
+  // }),
   email: z.string().nonempty("Email is required.").email("Invalid email."),
   subject: z.string(),
   message: z.string().min(3, { message: "At least 3 letters." }).nonempty("Message is required."),
@@ -33,20 +35,22 @@ export function Content() {
   const { 
     register, 
     handleSubmit, 
-    formState: { errors } 
+    reset,
+    formState: { errors, isSubmitSuccessful } 
   } = useHookForm<SendMessageFormData>({
     resolver: zodResolver(sendMessageFormSchema),
   })
 
-  const [serverState, submitMessage] = useFormspree(String(process.env.NEXT_PUBLIC_FORM_KEY))
+  const [serverState, submitMessage] = useFormspree(String(process.env.NEXT_PUBLIC_FORM_KEY))  
   
-  // async function sendMessage(data: SendMessageFormData) {
-  //   await submit(data)
-  // }
-  
-  if (serverState.succeeded) {
-    alert(`${form.success} ${form.successMessage}`)
-  } 
+  useEffect(() => {
+    if (serverState.succeeded) {
+      if (isSubmitSuccessful) {
+        reset({ name: "", email: "", subject: "", message: "" })
+      }
+      swal(form.success, form.successMessage, "success")
+    }    
+  }, [serverState])
 
   return (
     <PageContainer title={title} goToPage={goToPage}>
@@ -60,7 +64,7 @@ export function Content() {
               placeholder={`${form.name}`} 
               { ...register("name") }
             />
-            { errors.name && <span className="">{errors.name.message}</span>}
+            { errors.name && <small className={styles.errorMessage}>{errors.name.message}</small>}
           </div>
           <div className={styles.formElement}>
             <label htmlFor="name">{`${form.mail}`}</label>
@@ -70,7 +74,7 @@ export function Content() {
               required aria-required 
               { ...register("email") }
             />
-            { errors.email && <span className="">{errors.email.message}</span>}
+            { errors.email && <small className={styles.errorMessage}>{errors.email.message}</small>}
           </div>
           <div className={styles.fullWidthElement}>
             <label htmlFor="subject">{`${form.subject}`}</label>
@@ -87,7 +91,7 @@ export function Content() {
               required aria-required
               { ...register("message") }
             />
-            { errors.message && <span className="">{errors.message.message}</span>}
+            { errors.message && <small className={styles.errorMessage}>{errors.message.message}</small>}
           </div>
           <div className={styles.fullWidthElement}>
             <CustomButton 
