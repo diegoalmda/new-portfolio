@@ -14,7 +14,6 @@ import { CustomButton } from "../../components/CustomButton"
 const sendMessageFormSchema= z.object({
   name: z.string()
     .min(3, { message: "At least 3 letters." })
-    .regex(/^([a-z\\-]+)$/i, { message: "Invalid characters.",})
     .transform(name => {
       return name.trim().split(" ").map(word => {
         return word[0].toLocaleLowerCase().concat(word.substring(1))
