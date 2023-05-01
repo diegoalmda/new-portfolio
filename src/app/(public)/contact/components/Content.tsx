@@ -23,7 +23,10 @@ const sendMessageFormSchema= z.object({
   // }),
   email: z.string().nonempty("Email is required.").email("Invalid email."),
   subject: z.string(),
-  message: z.string().min(3, { message: "At least 3 letters." }).nonempty("Message is required."),
+  message: z.string()
+    .min(3, { message: "At least 3 letters." })
+    .nonempty("Message is required.")
+    .max(5000, { message: "More than 5000 letters." }),
 })
 
 type SendMessageFormData = z.infer<typeof sendMessageFormSchema>
