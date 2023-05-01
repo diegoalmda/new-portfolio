@@ -87,9 +87,6 @@ export function SideMenu() {
               <a href={`${selectedLanguage.selected === "pt" ? "https://www.linkedin.com/in/diegoalmda/" : "https://www.linkedin.com/in/diegoalmda/?locale=en_US"}`} aria-label={selectedLanguage.selected === "en" ? "Link to Diego Almeida's Linkedin profile page" : "Abrir página do perfil de Diego Almeida no Linkedin"} target="__blank" rel="noopener noreferrer"><strong><LinkedinLogo /></strong><span>LinkedIn</span></a>
             </li>
           </ul>
-          <div className={styles.copyright}>
-            <small><span>Diego Almeida </span>@{`${year.getFullYear()}`}</small>
-          </div>
         </div>
       </div>
     </section>

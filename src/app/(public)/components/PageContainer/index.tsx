@@ -47,7 +47,7 @@ export function PageContainer({ title, goToPage, children }: PageContainerProps)
       {
         title.toLowerCase() !== "home" && <div className={styles.titleContent}><h1>{title}</h1><hr></hr></div>
       }      
-      <div>
+      <div className={styles.sideNavigationContainer}>
         {
           title.toLowerCase() !== "home" && 
           <div className={styles.arrowLeftButton}>

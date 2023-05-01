@@ -64,85 +64,94 @@
   }
 }
 
-.arrowLeftButton, .arrowRightButton {
-  position: absolute;
-  top: 50%;                         
-  transform: translateY(0, -50%);
+.sideNavigationContainer {
+  position: relative;
 
-  span {
-    position: absolute;
-    font-size: 0;
-    white-space: nowrap;
-    bottom: -0.5rem;   
-    transition: font-size 0.4s; 
-  }
-
-  button {
-    background-color: transparent;
-
-    svg {
-      opacity: 0.6;
-      font-size: 3rem;      
-      color: var(--purple-500);
-      transition: transform 0.5s, opacity 0.5s;
-    }    
+  .arrowLeftButton, .arrowRightButton {
+    position: fixed;
+    top: 50%;                         
+    transform: translateY(0, -50%);
+  
+    span {
+      position: absolute;
+      font-size: 0;
+      white-space: nowrap;
+      bottom: -0.5rem;   
+      transition: font-size 0.4s; 
+    }
+  
+    button {
+      background-color: transparent;
+  
+      svg {
+        opacity: 0.6;
+        font-size: 3rem;      
+        color: var(--purple-500);
+        transition: transform 0.5s, opacity 0.5s;
+      }    
+    }
+    
+    &:hover {
+      span {
+        font-size: 0.6rem;
+      }
+  
+      button {
+        svg {
+          transform: scale(1.4);
+          opacity: 1;
+        }
+      }
+    }
+  
+    @media (max-width: 720px) {
+      button {
+        svg {
+          font-size: 2rem;
+        }
+      }
+    }
+  
+    @media (max-width: 420px) {
+      display: none;
+    }
   }
   
-  &:hover {
+  .arrowLeftButton {
+    left: 10rem;
+    margin-left: -3rem;
+  
     span {
-      font-size: 0.6rem;
+      right: 0.8rem;      
     }
 
-    button {
-      svg {
-        transform: scale(1.4);
-        opacity: 1;
+    @media (max-width: 1080px) {
+      left: 8rem;
+    }
+
+    @media (max-width: 720px) {    
+      left: 7.5rem; 
+
+      span {
+        right: 0.3rem;
+      } 
+    }
+  } 
+  
+  .arrowRightButton {
+    right: 4rem;
+    margin-right: -3rem;
+  
+    span {
+      right: 0.8rem;
+    }
+  
+    @media (max-width: 720px) {    
+      right: 4.5rem; 
+  
+      span {
+        right: 0.3rem;
       }
-    }
-  }
-
-  @media (max-width: 720px) {
-    button {
-      svg {
-        font-size: 2rem;
-      }
-    }
-  }
-
-  @media (max-width: 420px) {
-    display: none;
-  }
-}
-
-.arrowLeftButton {
-  left: 0;
-  margin-left: -3rem;
-
-  span {
-    right: 0.8rem;
-    
-  }
-  @media (max-width: 720px) {    
-    margin-left: -1.5rem; 
-    span {
-      right: 0.3rem;
-    } 
-  }
-} 
-
-.arrowRightButton {
-  right: 0;
-  margin-right: -3rem;
-
-  span {
-    right: 0.8rem;
-  }
-
-  @media (max-width: 720px) {    
-    margin-right: -1.5rem; 
-
-    span {
-      right: 0.3rem;
     }
   }
 }

@@ -1,0 +1,31 @@
+.copy {
+  position: fixed;
+  bottom: 0;
+  left: 10rem;
+  opacity: 1;
+  
+  @media (max-width: 1080px) {
+    left: 8rem;
+  }
+  
+  @media (max-width: 720px) {
+    left: 7rem;
+  }
+  
+  @media (max-width: 420px) {
+    left: 5rem;
+  }
+  
+  small {        
+    padding-right: 1rem;
+    border-top-right-radius: 5px;
+    white-space: nowrap;  
+    font-size: 0.8rem;
+    color: var(--blue-500);
+    background-color: var(--blue-100);
+    
+    span {
+      color: var(--green-500);
+    }
+  }
+}

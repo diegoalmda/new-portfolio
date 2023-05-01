@@ -39,8 +39,8 @@ export function ProjectsList({ list }: ProjectsListProps) {
                 <div className={styles.flipperCard}>
                   <div className={styles.frontCardContainer}>
                     <Image 
-                      width={320}
-                      height={210}
+                      width={300}
+                      height={225}
                       src={`${process.env.NEXT_PUBLIC_IMAGES}/${project.image}`} 
                       alt={project.name} 
                       title={project.name} 

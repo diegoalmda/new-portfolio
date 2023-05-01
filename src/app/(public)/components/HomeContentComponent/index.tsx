@@ -13,6 +13,7 @@ import profilePinkTriangle from "../../assets/images/profile-pink-triangle.svg"
 import littleTriangle from "../../assets/images/little-green-triangle.svg"
 
 import styles from "./home.module.scss"
+import { Copyright } from "../Copyright"
 
 export function HomeContentComponent() {  
   const { selectedLanguage } = useGlobalContext()

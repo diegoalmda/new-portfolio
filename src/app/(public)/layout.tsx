@@ -6,6 +6,7 @@ import { QuicksandFont } from "./fonts"
 
 import "./styles/global.scss"
 import styles from "./styles/common.module.scss"
+import { Copyright } from "./components/Copyright"
 
 export const metadata: Metadata = {
   title: "Diego Almeida - Full Stack Portfolio",
@@ -86,6 +87,7 @@ export default function RootLayout({
             </main>
           </div>
         </Providers>
+        <Copyright />
       </body>
     </html>
   )

@@ -5,7 +5,15 @@
   margin: 2rem 4rem 2rem 10rem;
   text-align: justify;  
   
+  @media (max-width: 1080px) {
+    margin: 2rem 4rem 2rem 8rem;
+  }
+  
   @media (max-width: 720px) {
+    margin: 2rem 4rem 2rem 7rem;
+  }
+  
+  @media (max-width: 420px) {
     margin: 2rem 2rem 2rem 5rem;
   }
 }
