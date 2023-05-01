@@ -68,8 +68,7 @@ export function SideMenu() {
                     href={`${item.link}`} 
                     className={`${segment === item.link ? styles.active : ""}`}
                     title={`${item.title}`}
-                    aria-label={selectedLanguage.selected === "en" ? `Go to ${item.title} page` : `Navegar para página ${item.title}`}
-                    
+                    aria-label={selectedLanguage.selected === "en" ? `Go to ${item.title} page` : `Navegar para página ${item.title}`}                   
                   >
                     { renderIcon(item.link) }
                     <span>{item.title}</span>

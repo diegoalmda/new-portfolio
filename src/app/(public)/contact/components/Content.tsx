@@ -2,7 +2,6 @@
 
 import { FormEvent, useState } from "react"
 import { useForm } from "@formspree/react"
-import swal from "sweetalert"
 
 import { PageContainer } from "../../components/PageContainer"
 import { useGlobalContext } from "../../contexts/GlobalApplicationContext"
@@ -31,7 +30,7 @@ export function Content() {
   }
   
   if (state.succeeded) {
-    swal(form.success, form.successMessage, "success")
+    alert(`${form.success} ${form.successMessage}`)
   }  
 
   return (

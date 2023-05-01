@@ -3,6 +3,10 @@
 
   a {
     text-decoration: underline;
+
+    &:hover {
+      color: var(--pink-500);
+    }
   }
 }
 
