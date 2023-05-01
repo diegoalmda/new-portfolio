@@ -1,6 +1,6 @@
 "use client"
 
-import { useForm } from "@formspree/react"
+import { useForm as useFormspree } from "@formspree/react"
 import { z } from "zod"
 import { useForm as useHookForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -39,13 +39,13 @@ export function Content() {
     resolver: zodResolver(sendMessageFormSchema),
   })
 
-  const [state, submit] = useForm(String(process.env.NEXT_PUBLIC_FORM_KEY))
+  const [serverState, submitMessage] = useFormspree(String(process.env.NEXT_PUBLIC_FORM_KEY))
   
-  async function sendMessage(data: SendMessageFormData) {
-    await submit(data)
-  }
+  // async function sendMessage(data: SendMessageFormData) {
+  //   await submit(data)
+  // }
   
-  if (state.succeeded) {
+  if (serverState.succeeded) {
     alert(`${form.success} ${form.successMessage}`)
   } 
 
@@ -53,7 +53,7 @@ export function Content() {
     <PageContainer title={title} goToPage={goToPage}>
       <div className={styles.contactContainer}>
         <p>{message}</p>
-        <form className={styles.formContainer} onSubmit={handleSubmit(sendMessage)}>
+        <form className={styles.formContainer} onSubmit={handleSubmit(submitMessage)}>
           <div className={styles.formElement}>
             <label htmlFor="name">{`${form.name}`}</label>
             <input 
@@ -94,7 +94,7 @@ export function Content() {
             <CustomButton 
               type="submit" 
               aria-label={form.button}
-              // disabled={state.submitting}
+              disabled={serverState.submitting}
             >
               <small>
                 {form.button}
