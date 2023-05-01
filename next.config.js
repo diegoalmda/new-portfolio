@@ -5,7 +5,6 @@ const nextConfig = {
   },
   env: {
     NEXT_PUBLIC_IMAGES: "/assets",
-    FORM_KEY: "xwkzbjqz",
   }
 }
 
