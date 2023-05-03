@@ -14,13 +14,7 @@ import { CustomButton } from "../../components/CustomButton"
 import { useEffect } from "react"
 
 const sendMessageFormSchema= z.object({
-  name: z.string()
-    .min(3, { message: "At least 3 letters." }),
-  // .transform(name => {
-  //   return name.trim().split(" ").map(word => {
-  //     return word[0].toLocaleLowerCase().concat(word.substring(1))
-  //   }).join(" ")
-  // }),
+  name: z.string().min(3, { message: "At least 3 letters." }),
   email: z.string().nonempty("Email is required.").email("Invalid email."),
   subject: z.string(),
   message: z.string()
@@ -64,17 +58,17 @@ export function Content() {
             <label htmlFor="name">{`${form.name}`}</label>
             <input 
               type="text"
-              placeholder={`${form.name}`} 
+              placeholder={`${form.namePlaceholder}`}
               { ...register("name") }
             />
             { errors.name && <small className={styles.errorMessage}>{errors.name.message}</small>}
           </div>
           <div className={styles.formElement}>
-            <label htmlFor="name">{`${form.mail}`}</label>
+            <label htmlFor="name">{`${form.mail}`}<span className={styles.requiredField}>*</span></label>
             <input 
               type="text" 
-              placeholder={`${form.mail} *`}
               required aria-required 
+              placeholder={`${form.mailPlaceholder}`}
               { ...register("email") }
             />
             { errors.email && <small className={styles.errorMessage}>{errors.email.message}</small>}
@@ -83,15 +77,15 @@ export function Content() {
             <label htmlFor="subject">{`${form.subject}`}</label>
             <input 
               type="text"
-              placeholder={`${form.subject}`} 
+              placeholder={`${form.subjectPlaceholder}`}
               { ...register("subject") }
             />
           </div>
           <div className={styles.fullWidthElement}>
-            <label htmlFor="message">{`${form.message}`}</label>
+            <label htmlFor="message">{`${form.message}`}<span className={styles.requiredField}>*</span></label>
             <textarea
-              placeholder={`${form.message} *`} 
               required aria-required
+              placeholder={`${form.messagePlaceholder}`}
               { ...register("message") }
             />
             { errors.message && <small className={styles.errorMessage}>{errors.message.message}</small>}

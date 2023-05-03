@@ -1,6 +1,8 @@
 "use client"
 
+import { useEffect } from "react"
 import Image from "next/image"
+import GoogleAnalytics from "react-ga"
 
 import { PageContainer } from "../../components/PageContainer"
 import { useGlobalContext } from "../../contexts/GlobalApplicationContext"
@@ -13,11 +15,14 @@ import profilePinkTriangle from "../../assets/images/profile-pink-triangle.svg"
 import littleTriangle from "../../assets/images/little-green-triangle.svg"
 
 import styles from "./home.module.scss"
-import { Copyright } from "../Copyright"
 
 export function HomeContentComponent() {  
   const { selectedLanguage } = useGlobalContext()
   const { greetings, beforeName, description, file, doc, goToPage } = selectedLanguage.home
+
+  useEffect(() => {
+    GoogleAnalytics.pageview(window.location.pathname)
+  }, [])
 
   return (
     <PageContainer title="Home" goToPage={goToPage}>

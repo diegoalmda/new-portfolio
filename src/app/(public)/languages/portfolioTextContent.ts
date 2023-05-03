@@ -57,6 +57,10 @@ const pt = {
       mail: "E-mail",
       subject: "Assunto",
       message: "Mensagem",
+      namePlaceholder: "Digite seu nome",
+      mailPlaceholder: "seuemail@email.com",
+      subjectPlaceholder: "Proposta de trabalho",
+      messagePlaceholder: "Olá, Diego...",
       button: "Enviar",
       success: "Mensagem enviada!", 
       successMessage: "Em breve retornarei o contato!"
@@ -202,6 +206,10 @@ const en = {
       mail: "Email",
       subject: "Subject",
       message: "Message",
+      namePlaceholder: "John Doe",
+      mailPlaceholder: "johndoe@email.com",
+      subjectPlaceholder: "Message's subject goes here.",
+      messagePlaceholder: "Write your message...",
       button: "Send",
       success: "Your message has been sent!", 
       successMessage: "I'll get back to you soon!"

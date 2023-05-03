@@ -17,6 +17,11 @@
       color: var(--error-message);
       // font-size: 0.8rem;
     }
+    
+    .requiredField {
+      color: var(--error-message);
+      display: inline;
+    }
 
     & > :nth-child(1) {
       margin-right: 0.5rem;

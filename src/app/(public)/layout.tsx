@@ -1,12 +1,15 @@
 import { Metadata } from "next"
+import GoogleAnalytics from "react-ga"
 
 import { SideMenu } from "./components/SideMenu"
+import { Copyright } from "./components/Copyright"
 import { Providers } from "./providers"
 import { QuicksandFont } from "./fonts"
 
-import "./styles/global.scss"
 import styles from "./styles/common.module.scss"
-import { Copyright } from "./components/Copyright"
+import "./styles/global.scss"
+
+GoogleAnalytics.initialize(`${process.env.NEXT_PUBLIC_TRACKING_ID}`)
 
 export const metadata: Metadata = {
   title: "Diego Almeida - Full Stack Portfolio",
