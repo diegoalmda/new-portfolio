@@ -8,7 +8,6 @@ import { ProjectProps } from "./projectModal"
 import { ProjectsList } from "./ProjectsList"
 
 import styles from "./styles.module.scss"
-import { Copyright } from "../../components/Copyright"
 
 export function Content() {
   const { selectedLanguage, selectLanguage } = useGlobalContext()

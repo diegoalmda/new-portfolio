@@ -17,8 +17,6 @@ import { useCallback } from "react"
 
 export function SideMenu() {
   const { selectedLanguage } = useGlobalContext()
-
-  const year = new Date()
   let segment = useSelectedLayoutSegment()
 
   if(segment === null) {
