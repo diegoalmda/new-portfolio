@@ -39,7 +39,7 @@ export function HomeContentComponent() {
         <Image className={styles.littleTriangle} src={littleTriangle} alt="Green triangle" />
       </div>
       <div className={styles.resumeSection}>
-        <a href={file} title={selectedLanguage.selected === "en" ? "Diego Almeida Curriculum" : "Currículo de Diego Almeida"} target="_blank" rel="noopener noreferrer">
+        <a href={file} title={selectedLanguage.selected === "en" ? "Diego Almeida Curriculum" : "Currículo de Diego Almeida"} target="_blank" rel="noopener noreferrer" download>
           <CustomButton aria-label={selectedLanguage.selected === "en" ? "Diego Almeida Curriculum" : "Currículo de Diego Almeida"}>{doc}</CustomButton>
         </a>
       </div>
