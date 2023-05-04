@@ -11,9 +11,9 @@ import "./styles/global.scss"
 export const metadata: Metadata = {
   title: "Diego Almeida - Full Stack Portfolio",
   description: "Diego Almeida Full Stack Developer Portfolio",
-  manifest: "https://nextjs.org/manifest.json",
+  // manifest: "https://nextjs.org/manifest.json",
   generator: "Next.js",
-  applicationName: "Next.js",
+  applicationName: "Diego Almeida - Full Stack Portfolio",
   referrer: "origin-when-cross-origin",
   keywords: [
     "Next.js", 
