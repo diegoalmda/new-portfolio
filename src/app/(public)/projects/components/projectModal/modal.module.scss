@@ -33,6 +33,10 @@
       display: flex;
       justify-content: space-between;
 
+      h2 {
+        text-align: start;
+      }
+
       button {
         background-color: transparent;
 
@@ -54,11 +58,25 @@
         font-size: 2rem;
       }
     }
-
     
     .projectContent {
       max-height: calc(100vh - 100px);
       overflow-y: auto;
+      padding-right: 1rem;
+
+      &::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: var(--blue-500-40);
+        border-radius: 12px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--blue-500);
+        border-radius: 12px;
+      }
       
       .technologiesList {
         color: var(--purple-500);
@@ -119,7 +137,5 @@
         text-align: justify;        
       }
     }
-
   }
 }
-

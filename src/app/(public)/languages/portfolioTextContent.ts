@@ -99,7 +99,7 @@ const pt = {
         figma: "",
         message: "Em breve!",
         image: "projects/travelagency.png",
-        technologies: ["Figma", "Front-end", "Full Stack", "HTML", "CSS", "React.js", "React Router Dom", "Context API", "Styled components", "Phosphor icons", "Date-fns", "Node.js", "Express Framework", "JWT"],
+        technologies: ["Figma", "Front-end", "Full Stack", "HTML", "CSS", "React.js", "React Router Dom", "Context API", "Styled components", "Phosphor icons", "Node.js", "Express Framework", "JWT"],
         text: "É um projeto Full Stack para uma agência de viagens. São 2 front-ends React que se comunicam com uma API criada em Node.js, para cadastrar promoções, grupos de viagens, usuários do sistema, entre outros. Um front será a página principal da agência, onde os clientes irão acessar e verificar promoções e grupos disponíveis de viagem, a partir de informações trazidas via requisições REST à API. O outro front, se trata de um portal administrativo, onde será feito o controle de todo o conteúdo não-estático que irá aparecer no site."
       },
       {
@@ -109,7 +109,7 @@ const pt = {
         figma: "",
         message: "",
         image: "projects/ignitecall.png",
-        technologies: ["Next.js", "Front-end", "TypeScript", "React.js", "Node.js", "Full Stack", "Prisma.io", "Google APIs", "Google Cloud Platform", "Phosphor icons", "Docker", "ESLint", "Date-fns", "Zod", "Axios", "Stitches (CSS-in-JS)", "Next Auth", "NExt Seo", "Nookies", "React Hook Form", "Design System"],
+        technologies: ["Next.js", "Front-end", "TypeScript", "React.js", "Node.js", "Full Stack", "Prisma.io", "Google APIs", "Google Cloud Platform", "Phosphor icons", "Docker", "ESLint", "Zod", "Axios", "Stitches (CSS-in-JS)", "Next Auth", "Next Seo", "Nookies", "React Hook Form", "Design System"],
         text: "O projeto Ignite Call é um projeto Full Stack que construído para agendamentos de compromissos a partir de um calendário com integração com o Google Agenda. O usuário pode se cadastrar no app a partir de sua conta do Google e indicar seus dias da semana e horários em que estará disponível para agendar compromissos. Todo agendamento cadastrado na aplicação tem integração com o Google Agenda, o que possibilita ao usuário verificar seus novos compromissos direto na plataforma do Google."
       },
       {
@@ -119,7 +119,7 @@ const pt = {
         figma: "",
         message: "",
         image: "projects/timer.png",
-        technologies: ["Front-end", "HTML", "CSS", "Vite", "TypeScript", "React.js", "React Router Dom", "Context API", "useReducer", "Styled components", "Phosphor icons", "Immer JS", "ESLint", "Date-fns", "Zod"],
+        technologies: ["Front-end", "HTML", "CSS", "Vite", "TypeScript", "React.js", "React Router Dom", "Context API", "useReducer", "Styled components", "Phosphor icons", "Immer JS", "ESLint", "Zod"],
         text: "O projeto Timer foi idealizado para seguir a técnica de gerenciamento de tempo chamada Pomodoro. Esta técnica tem como objetivo o aumento da produtividade ao realizar uma determinada tarefa, utilizando um timer e fazendo pequenos intervalos entre cada finalização da contagem do tempo até concluir as tarefas programadas para serem finalizadas em cada timer."
       },
       {
@@ -252,7 +252,7 @@ const en = {
         figma: "",
         message: "Coming soon!",
         image: "projects/travelagency.png",
-        technologies: ["Figma", "Front-end", "Full Stack", "HTML", "CSS", "React.js", "React Router Dom", "Context API", "Styled components", "Phosphor icons", "Date-fns", "Node.js", "Express Framework", "JWT"],
+        technologies: ["Figma", "Front-end", "Full Stack", "HTML", "CSS", "React.js", "React Router Dom", "Context API", "Styled components", "Phosphor icons", "Node.js", "Express Framework", "JWT"],
         text: "It's a Full Stack project for a travel agency. There are 2 React front-ends that communicate with an API created in Node.js, to register promotions, travel groups, system users, among other functionalities. One front will be the agency's main page, where customers will be able to access and check available promotions and travel groups, based on information brought by REST requests to the API. The other front is an administrative portal, where all non-static content will be controlled."
       },
       {
@@ -262,7 +262,7 @@ const en = {
         figma: "",
         message: "",
         image: "projects/ignitecall.png",
-        technologies: ["Next.js", "Front-end", "TypeScript", "React.js", "Node.js", "Full Stack", "Prisma.io", "Google APIs", "Google Cloud Platform", "Phosphor icons", "Docker", "ESLint", "Date-fns", "Zod", "Axios", "Stitches (CSS-in-JS)", "Next Auth", "NExt Seo", "Nookies", "React Hook Form", "Design System"],
+        technologies: ["Next.js", "Front-end", "TypeScript", "React.js", "Node.js", "Full Stack", "Prisma.io", "Google APIs", "Google Cloud Platform", "Phosphor icons", "Docker", "ESLint", "Zod", "Axios", "Stitches (CSS-in-JS)", "Next Auth", "NExt Seo", "Nookies", "React Hook Form", "Design System"],
         text: "The Ignite Call project is a Full Stack project that was built for scheduling appointments from a calendar with Google Calendar integration. Users can register for the app using their Google account and indicate their days of the week and times when they will be available to schedule appointments. Every schedule registered in the application has integration with Google Calendar, which allows the user to check their new appointments directly on the Google platform."
       },
       {
@@ -272,7 +272,7 @@ const en = {
         figma: "",
         message: "",
         image: "projects/timer.png",
-        technologies: ["Front-end", "HTML", "CSS", "Vite", "TypeScript", "React.js", "React Router Dom", "Context API", "useReducer", "Styled components", "Phosphor icons", "Immer JS", "ESLint", "Date-fns", "Zod"],
+        technologies: ["Front-end", "HTML", "CSS", "Vite", "TypeScript", "React.js", "React Router Dom", "Context API", "useReducer", "Styled components", "Phosphor icons", "Immer JS", "ESLint", "Zod"],
         text: "The Timer project was conceived to follow the time management technique called Pomodoro. This technique aims to increase productivity when performing a certain task, using a timer and making small intervals between each completion of the time count until completing the tasks scheduled to be completed in each timer."
       },
       {
