@@ -59,10 +59,14 @@ const pt = {
       message: "Mensagem",
       namePlaceholder: "Digite seu nome",
       mailPlaceholder: "seuemail@email.com",
-      subjectPlaceholder: "Proposta de trabalho",
-      messagePlaceholder: "Olá, Diego...",
+      subjectPlaceholder: "Assunto da mensagem",
+      messagePlaceholder: "Digite a mensagem",
+      nameErrorMessage: "Pelo menos 3 letras.",
+      mailErrorMessage: "E-mail é obrigatório.",
+      subjectErrorMessage: "",
+      messageErrorMessage: "Mensagem de 3 a 5000 letras.",
       button: "Enviar",
-      success: "Mensagem enviada!", 
+      success: "Mensagem enviada!",
       successMessage: "Em breve retornarei o contato!"
     },
     goToPage: {
@@ -210,6 +214,10 @@ const en = {
       mailPlaceholder: "johndoe@email.com",
       subjectPlaceholder: "Message's subject goes here.",
       messagePlaceholder: "Write your message...",
+      nameErrorMessage: "",
+      mailErrorMessage: "",
+      subjectErrorMessage: "",
+      messageErrorMessage: "",
       button: "Send",
       success: "Your message has been sent!", 
       successMessage: "I'll get back to you soon!"

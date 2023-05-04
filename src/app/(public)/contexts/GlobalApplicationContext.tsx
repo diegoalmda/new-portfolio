@@ -53,6 +53,10 @@ interface GlobalApplicationProps {
       mailPlaceholder: string,
       subjectPlaceholder: string,
       messagePlaceholder: string,
+      nameErrorMessage: string,
+      mailErrorMessage: string,
+      subjectErrorMessage: string,
+      messageErrorMessage: string,
       button: string,
       success: string, 
       successMessage: string

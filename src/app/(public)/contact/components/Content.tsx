@@ -58,20 +58,26 @@ export function Content() {
             <label htmlFor="name">{`${form.name}`}</label>
             <input 
               type="text"
+              className={`${errors.name ? styles.errorField : ""}`}
               placeholder={`${form.namePlaceholder}`}
               { ...register("name") }
             />
-            { errors.name && <small className={styles.errorMessage}>{errors.name.message}</small>}
+            <div className={styles.errorContainer}>
+              { errors.name && <small className={styles.errorMessage}>{`${selectedLanguage.selected === "pt" ? form.nameErrorMessage : errors.name.message }`}</small>}
+            </div>
           </div>
           <div className={styles.formElement}>
-            <label htmlFor="name">{`${form.mail}`}<span className={styles.requiredField}>*</span></label>
+            <label htmlFor="email">{`${form.mail}`}<span className={styles.requiredField}>*</span></label>
             <input 
               type="text" 
+              className={`${errors.email ? styles.errorField : ""}`}
               required aria-required 
               placeholder={`${form.mailPlaceholder}`}
               { ...register("email") }
             />
-            { errors.email && <small className={styles.errorMessage}>{errors.email.message}</small>}
+            <div className={styles.errorContainer}>
+              { errors.email && <small className={styles.errorMessage}>{`${selectedLanguage.selected === "pt" ? form.mailErrorMessage : errors.email.message }`}</small>}
+            </div>
           </div>
           <div className={styles.fullWidthElement}>
             <label htmlFor="subject">{`${form.subject}`}</label>
@@ -80,15 +86,19 @@ export function Content() {
               placeholder={`${form.subjectPlaceholder}`}
               { ...register("subject") }
             />
+            <div className={styles.errorContainer}></div>
           </div>
           <div className={styles.fullWidthElement}>
             <label htmlFor="message">{`${form.message}`}<span className={styles.requiredField}>*</span></label>
             <textarea
+              className={`${errors.message ? styles.errorField : ""}`}
               required aria-required
               placeholder={`${form.messagePlaceholder}`}
               { ...register("message") }
             />
-            { errors.message && <small className={styles.errorMessage}>{errors.message.message}</small>}
+            <div className={styles.errorContainer}>
+              { errors.message && <small className={styles.errorMessage}>{`${selectedLanguage.selected === "pt" ? form.messageErrorMessage : errors.message.message }`}</small>}
+            </div>
           </div>
           <div className={styles.fullWidthElement}>
             <CustomButton 

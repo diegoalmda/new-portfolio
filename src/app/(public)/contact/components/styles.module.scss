@@ -50,6 +50,10 @@
         color: var(--purple-800-40);
       }
     }
+    
+    .errorField {
+      border-bottom: 2px solid var(--error-message);
+    }
 
     input:-webkit-autofill,
     input:-webkit-autofill:hover, 
@@ -64,6 +68,10 @@
       -webkit-text-fill-color: var(--purple-800);
       // -webkit-box-shadow: 0 0 0 30px var(--blue-500-40) inset !important;
       transition: background-color 5000s ease-in-out 0s;
+    }
+
+    .fullWidthElement .errorContainer, .formElement .errorContainer {
+      height: 1.2rem;
     }
     
     .fullWidthElement {
