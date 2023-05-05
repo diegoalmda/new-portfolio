@@ -106,6 +106,12 @@ export const metadata: Metadata = {
         height: 600,
         alt: "Diego almeida portfolio"
       },
+      {
+        url: "https://diegoalmeida.tech/og600x600.png",
+        width: 600,
+        height: 600,
+        alt: "Diego almeida portfolio"
+      },
     ],
     locale: "en-US",
     type: "website",

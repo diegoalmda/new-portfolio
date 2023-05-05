@@ -13,7 +13,7 @@ import styles from "./styles.module.scss"
 
 export function Content() {
   const { selectedLanguage } = useGlobalContext()
-  const { title, text, secondTitle, coursesData, goToPage } = selectedLanguage.about
+  const { title, text, secondTitle, linkedinProfile, coursesData, goToPage } = selectedLanguage.about
 
   const renderCourse = useCallback((title: string) => {
     switch(title) {
@@ -57,6 +57,11 @@ export function Content() {
               )
             })
           }
+        </div>
+        <div className={styles.seeMoreCoursesSection}>
+          <p>{linkedinProfile}
+            <a href={`${selectedLanguage.selected === "pt" ? "https://www.linkedin.com/in/diegoalmda/" : "https://www.linkedin.com/in/diegoalmda/?locale=en_US"}`} aria-label={selectedLanguage.selected === "en" ? "Link to Diego Almeida's Linkedin profile page" : "Abrir página do perfil de Diego Almeida no Linkedin"} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </p>
         </div>
       </div>
     </PageContainer>

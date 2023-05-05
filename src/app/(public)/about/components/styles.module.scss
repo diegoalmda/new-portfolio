@@ -39,4 +39,18 @@
       }
     }
   }
+
+  .seeMoreCoursesSection {
+    margin: 2rem 0;
+    font-weight: 600;
+    text-align: start;
+
+    a {
+      color: var(--pink-500);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }

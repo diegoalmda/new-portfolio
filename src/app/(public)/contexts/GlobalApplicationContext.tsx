@@ -28,6 +28,7 @@ interface GlobalApplicationProps {
     title: string,
     subtitle: string,
     secondTitle: string,
+    linkedinProfile: string,
     message: string,
     text: string,
     coursesData: { 
