@@ -59,6 +59,7 @@ export function Content() {
             <input 
               type="text"
               className={`${errors.name ? styles.errorField : ""}`}
+              required aria-required
               placeholder={`${form.namePlaceholder}`}
               { ...register("name") }
             />
