@@ -1,9 +1,10 @@
 "use client"
 
-import { PageContainer } from "@/components/PageContainer"
-import styles from "./styles.module.scss"
-import { TechnologyCards } from "./TechnologyCards"
 import { useGlobalContext } from "@/contexts/GlobalApplicationContext"
+import { PageContainer } from "@/components/PageContainer"
+import { TechnologyCards } from "./TechnologyCards"
+
+import styles from "./styles.module.scss"
 
 export function Content() {
   const { selectedLanguage } = useGlobalContext()

@@ -4,6 +4,7 @@ import Image from "next/image"
 
 import { PageContainer } from "../../components/PageContainer"
 import { CustomButton } from "../CustomButton"
+import { useGlobalContext } from "@/contexts/GlobalApplicationContext"
 
 import profilePicture from "@/assets/images/profile-picture.png"
 import profilePurpleTriangle from "@/assets/images/profile-purple-triangle.svg"
@@ -12,7 +13,6 @@ import profilePinkTriangle from "@/assets/images/profile-pink-triangle.svg"
 import littleTriangle from "@/assets/images/little-green-triangle.svg"
 
 import styles from "./home.module.scss"
-import { useGlobalContext } from "@/contexts/GlobalApplicationContext"
 
 export function HomeContentComponent() {  
   const { selectedLanguage } = useGlobalContext()

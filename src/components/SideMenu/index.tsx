@@ -1,11 +1,12 @@
 "use client"
 
+import { useCallback } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { House, User, Desktop, SuitcaseSimple, AddressBook, LinkedinLogo, GithubLogo, CaretRight } from "phosphor-react"
 import { useSelectedLayoutSegment } from "next/navigation"
 
-
+import { useGlobalContext } from "@/contexts/GlobalApplicationContext"
 
 import avatar from "@/assets/images/avatar.png"
 import triangle_purple from "@/assets/images/triangle-purple.svg"
@@ -13,8 +14,6 @@ import triangle_green from "@/assets/images/triangle-green.svg"
 import triangle_pink from "@/assets/images/triangle-pink.svg"
 
 import styles from "./styles.module.scss"
-import { useCallback } from "react"
-import { useGlobalContext } from "@/contexts/GlobalApplicationContext"
 
 export function SideMenu() {
   const { selectedLanguage } = useGlobalContext()

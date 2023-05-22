@@ -1,13 +1,13 @@
 "use client"
 
 import { useCallback, useState } from "react"
+import Image from "next/image"
 
+import { CustomButton } from "@/components/CustomButton"
+import { useGlobalContext } from "@/contexts/GlobalApplicationContext"
 import { ProjectModal, ProjectProps } from "../projectModal"
 
 import styles from "./projects.module.scss"
-import Image from "next/image"
-import { CustomButton } from "@/components/CustomButton"
-import { useGlobalContext } from "@/contexts/GlobalApplicationContext"
 
 interface ProjectsListProps {
   list: ProjectProps[]
@@ -44,6 +44,7 @@ export function ProjectsList({ list }: ProjectsListProps) {
                       src={`${process.env.NEXT_PUBLIC_IMAGES}/${project.image}`} 
                       alt={project.name} 
                       title={project.name} 
+                      loading="eager"
                     />
                   </div>
                   <div className={styles.backCardContainer}>

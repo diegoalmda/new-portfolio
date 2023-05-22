@@ -1,8 +1,8 @@
 import Image from "next/image"
 
-import styles from "./cards.module.scss"
-
 import { mySkills } from "./content"
+
+import styles from "./cards.module.scss"
 
 export function TechnologyCards() {
   return (

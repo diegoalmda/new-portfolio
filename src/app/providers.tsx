@@ -1,8 +1,9 @@
 "use client"
 
+import { ReactNode } from "react"
+
 import { Analytics } from "@/components/Analytics"
 import { GlobalApplicationContextProvider } from "@/contexts/GlobalApplicationContext"
-import { ReactNode } from "react"
 
 interface ProvidersProps {
   children: ReactNode;

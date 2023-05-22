@@ -3,13 +3,14 @@
 import { useCallback } from "react"
 import Image from "next/image"
 
+import { useGlobalContext } from "@/contexts/GlobalApplicationContext"
+import { PageContainer } from "@/components/PageContainer"
+
 import ifpb from "@/assets/images/courses/ifpb-logo.png"
 import rocketseat from "@/assets/images/courses/rocketseat-logo.png"
 import udemy from "@/assets/images/courses/udemy-logo.png"
 
 import styles from "./styles.module.scss"
-import { PageContainer } from "@/components/PageContainer"
-import { useGlobalContext } from "@/contexts/GlobalApplicationContext"
 
 export function Content() {
   const { selectedLanguage } = useGlobalContext()

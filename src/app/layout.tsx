@@ -3,10 +3,11 @@ import { Metadata } from "next"
 import { Providers } from "./providers"
 import { QuicksandFont } from "./fonts"
 
-import styles from "@/styles/common.module.scss"
-import "@/styles/global.scss"
 import { SideMenu } from "@/components/SideMenu"
 import { Copyright } from "@/components/Copyright"
+
+import "@/styles/global.scss"
+import styles from "@/styles/common.module.scss"
 
 export const metadata: Metadata = {
   title: "Diego Almeida - Full Stack Portfolio",

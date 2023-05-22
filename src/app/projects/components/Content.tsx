@@ -1,13 +1,14 @@
 "use client"
 
 import { useCallback, useEffect, useState } from "react"
-import { ProjectProps } from "./projectModal"
-import { ProjectsList } from "./ProjectsList"
 
-import styles from "./styles.module.scss"
+import { useGlobalContext } from "@/contexts/GlobalApplicationContext"
 import { CustomButton } from "@/components/CustomButton"
 import { PageContainer } from "@/components/PageContainer"
-import { useGlobalContext } from "@/contexts/GlobalApplicationContext"
+import { ProjectsList } from "./ProjectsList"
+import { ProjectProps } from "./projectModal"
+
+import styles from "./styles.module.scss"
 
 export function Content() {
   const { selectedLanguage, selectLanguage } = useGlobalContext()

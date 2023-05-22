@@ -1,12 +1,13 @@
 "use client"
 
+import { ReactNode, useCallback } from "react"
 import { useRouter } from "next/navigation"
 import { CaretLeft, CaretRight } from "phosphor-react"
-import { ReactNode, useCallback } from "react"
+
 import { CustomButton } from "../CustomButton"
+import { useGlobalContext } from "@/contexts/GlobalApplicationContext"
 
 import styles from "./styles.module.scss"
-import { useGlobalContext } from "@/contexts/GlobalApplicationContext"
 
 interface PageContainerProps {
   title: string

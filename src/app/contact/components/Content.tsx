@@ -1,17 +1,17 @@
 "use client"
 
-import { useForm as useFormspree } from "@formspree/react"
+import { useEffect } from "react"
 import { z } from "zod"
 import { useForm as useHookForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
-
+import { useForm as useFormspree } from "@formspree/react"
 import swal from "sweetalert"
 
-import styles from "./styles.module.scss"
-import { useEffect } from "react"
+import { useGlobalContext } from "@/contexts/GlobalApplicationContext"
 import { CustomButton } from "@/components/CustomButton"
 import { PageContainer } from "@/components/PageContainer"
-import { useGlobalContext } from "@/contexts/GlobalApplicationContext"
+
+import styles from "./styles.module.scss"
 
 const sendMessageFormSchema= z.object({
   name: z.string().min(3, { message: "At least 3 letters." }),

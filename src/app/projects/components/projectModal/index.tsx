@@ -2,8 +2,9 @@ import { useCallback } from "react"
 import Image from "next/image"
 import { X } from "phosphor-react"
 
-import styles from "./modal.module.scss"
 import { CustomButton } from "@/components/CustomButton"
+
+import styles from "./modal.module.scss"
 
 export interface ProjectProps {
   name: string,
@@ -56,7 +57,7 @@ export function ProjectModal({ projectData, language, handleHideModal }: Project
             }
           </div>
           <div className={styles.imageContainer}>
-            <Image src={`${process.env.NEXT_PUBLIC_IMAGES}/${image}`} width={320}  height={210} alt={name} title={name} />
+            <Image src={`${process.env.NEXT_PUBLIC_IMAGES}/${image}`} width={320}  height={210} alt={name} title={name} loading="eager" />
           </div>
           <div className={styles.linkButtons}>
             { figma === "" && repo === "" && live === "" && <small className={styles.alertMessage}>{`${language === "en" ? "No link yet": "Ainda não foi disponibilizado links de acesso ao projeto."}`}</small> }
