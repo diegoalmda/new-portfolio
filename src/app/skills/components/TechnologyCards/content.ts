@@ -56,8 +56,8 @@ export const mySkills = [
   },
   {
     image: "skills/node.svg",
-    alt: "Node.JS logo",
-    title: "Node.JS"
+    alt: "Node.js logo",
+    title: "Node.js"
   },
   {
     image: "skills/firebase.svg",
@@ -83,5 +83,10 @@ export const mySkills = [
     image: "skills/docker.svg",
     alt: "Docker logo",
     title: "Docker"
+  },
+  {
+    image: "skills/vue.svg",
+    alt: "Vue.js logo",
+    title: "Vue.js"
   },
 ]
